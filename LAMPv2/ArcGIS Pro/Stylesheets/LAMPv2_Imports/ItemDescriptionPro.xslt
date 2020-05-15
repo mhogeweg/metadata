@@ -14,11 +14,10 @@
 
     <table border="0px">
     <tr valign="middle" style="background-color: #fff;">
-		<td><img src="https://raw.githubusercontent.com/mhogeweg/metadata/master/LAMPv2/ArcGIS%20Pro/Stylesheets/LAMPv2_Imports/esri-10GlobeLogo_1C.png" style="height:30px" alt="Esri Inc. Logo"></img></td>
-		<td><span class="idHeading" style="background-color: #ffffff;font-size: 2em">LAMP v2</span></td>
+		<td></td>
 	</tr>
 	</table>
-	<p></p>
+	<p><span class="idHeading" style="background-color: #ffffff;font-size: 2em">LAMP v2</span></p>
 
 	<!-- Title -->
 	<h1 id="title">
