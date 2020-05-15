@@ -14,8 +14,8 @@
 
     <table border="0px">
     <tr valign="middle" style="background-color: #fff;">
-		<td><img src="https://mart3612.esri.com/www/esri/demo/metadata/images/NATO_logo.png" style="width:30px; height:30px" alt="NATO Logo"></img></td>
-		<td><span class="idHeading" style="background-color: #ffffff;font-size: 2em">NATO Geospatial Metadata</span></td>
+		<td><img src="https://raw.githubusercontent.com/mhogeweg/metadata/master/LAMPv2/ArcGIS%20Pro/Stylesheets/LAMPv2_Imports/esri-10GlobeLogo_1C.png" style="height:30px" alt="Esri Inc. Logo"></img></td>
+		<td><span class="idHeading" style="background-color: #ffffff;font-size: 2em">LAMP v2</span></td>
 	</tr>
 	</table>
 	<p></p>
