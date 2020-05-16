@@ -30,10 +30,13 @@ limitations under the License.​
     <updateCategory refID="esri_metadata_metadataEditors">
       <insertComponent id="LAMPv2_metadataEditor_toolkit" className="ToolkitMetadataEditor">
         <content type="ToolkitEditor" displayName="LAMPv2 Metadata Toolkit Editor" id="d2832cd4-42f2-4995-9726-c69b28ea5574">
-          <metadataConfig ArcGISProfile="ISO19139" ValidatePages="True">
+          <metadataConfig ArcGISProfile="LAMPv2" ValidatePages="True">
             <validationNamespaceURI>http://www.isotc211.org/2005/gmd</validationNamespaceURI>
             <validationSchemaURL>http://www.isotc211.org/schemas/2005/gmd/metadataEntity.xsd</validationSchemaURL>
-            <tranformStyle>ISO19139</tranformStyle>
+            <tranformStyle>
+              <importStyle>Metadata\Export\LAMPv2_to_ArcGIS.xslt</importStyle>
+              <exportStyle>Metadata\Export\ArcGIS_to_LAMPv2.xslt</exportStyle>
+            </tranformStyle>
             <viewerXslt>Metadata\Stylesheets\ArcGISProLAMPv2.xsl</viewerXslt>
             <editor>
               <forms>
