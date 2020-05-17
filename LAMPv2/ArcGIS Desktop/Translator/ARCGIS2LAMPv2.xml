@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<translator name="ARCGIS to LAMPv2" xslt="Transforms\ArcGIS_2LAMPv2.xslt" logLevel="error" stopOnErrors="no">
+	<!-- empty -->
+</translator>
