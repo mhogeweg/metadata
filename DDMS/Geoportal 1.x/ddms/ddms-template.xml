@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ddms:Resource xmlns:ddms="http://metadata.dod.mil/mdr/ns/DDMS/1.4/" xmlns:ICISM="urn:us:gov:ic:ism:v2" xmlns:ec08="http://www.opengis.net/ec08" xmlns:gml="http://www.opengis.net/gml" xmlns:sml="http://www.opengis.net/sensorML/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ddms:identifier ddms:qualifier="URL" ddms:value="f"/>
+    <ddms:title ICISM:classification="U" ICISM:ownerProducer="USA" ICISM:disseminationControls="NONE">title</ddms:title>
+    <ddms:description ICISM:classification="U" ICISM:ownerProducer="USA" ICISM:disseminationControls="NONE">description</ddms:description>
+    <ddms:language ddms:qualifier="ISO 639-1" ddms:value="en" />
+    <ddms:dates ddms:posted="2008-04-07" />
+    <ddms:rights ddms:copyright="false" ddms:privacyAct="false" ddms:intellectualProperty="false"/>
+    <ddms:creator ICISM:classification="U" ICISM:ownerProducer="USA" ICISM:disseminationControls="NONE">
+        <ddms:Person>
+            <ddms:name>Joe Average</ddms:name>
+            <ddms:surname>Average</ddms:surname>
+            <ddms:affiliation>Acme Sensor Widgets</ddms:affiliation>
+            <ddms:phone>703-669-5510</ddms:phone>
+            <ddms:email>joe.average@someagency.mil</ddms:email>
+        </ddms:Person>
+    </ddms:creator>
+    <ddms:publisher ICISM:classification="U" ICISM:ownerProducer="USA">
+        <ddms:Organization>
+            <ddms:name>Acme Sensor Widgets</ddms:name>
+            <ddms:phone>703-669-5510</ddms:phone>
+            <ddms:email>johnd@imagem.cc</ddms:email>
+        </ddms:Organization>
+    </ddms:publisher>
+    <ddms:format>
+        <ddms:Media>
+            <ddms:mimeType>text/xml</ddms:mimeType>
+            <ddms:extent ddms:qualifier="sizeBytes" ddms:value="205"/>
+            <ddms:medium>digital</ddms:medium>
+        </ddms:Media>
+    </ddms:format>
+    <ddms:subjectCoverage>
+        <ddms:Subject>
+            <ddms:keyword ddms:value="society"/>
+            <ddms:keyword ddms:value="Live Data and Maps"/>
+            <ddms:keyword ddms:value="Targeting"/>
+            <ddms:keyword ddms:value="0992-00101"/>
+            <ddms:keyword ddms:value="93000"/>
+        </ddms:Subject>
+    </ddms:subjectCoverage>
+    <ddms:temporalCoverage>
+        <ddms:TimePeriod>
+            <ddms:start>2007-09-21</ddms:start>
+            <ddms:end>2006-12-31</ddms:end>
+        </ddms:TimePeriod>
+    </ddms:temporalCoverage>
+    <ddms:geospatialCoverage>
+       <ddms:GeospatialExtent>
+		   <ddms:boundingBox>
+			   <ddms:WestBL>-122</ddms:WestBL>
+			   <ddms:EastBL>-102</ddms:EastBL>
+			   <ddms:SouthBL>32</ddms:SouthBL>
+			   <ddms:NorthBL>52</ddms:NorthBL>
+		   </ddms:boundingBox>
+<!--
+           <ddms:boundingGeometry>
+              <gml:Polygon gml:srsName="http://metadata.dod.mil/mdr/ns/GSIP/crs/WGS84E_2D">
+                 <gml:exterior>
+                    <gml:LinearRing>
+                       <gml:pos gml:srsName="http://metadata.dod.mil/mdr/ns/GSIP/crs/WGS84E_2D"> 40.1547483845221 -122.252401969642 </gml:pos>
+                       <gml:pos gml:srsName="http://metadata.dod.mil/mdr/ns/GSIP/crs/WGS84E_2D"> 40.1547483845221 -122.246486919247 </gml:pos>
+                       <gml:pos gml:srsName="http://metadata.dod.mil/mdr/ns/GSIP/crs/WGS84E_2D"> 40.1541405043668 -122.246486919247 </gml:pos>
+                       <gml:pos gml:srsName="http://metadata.dod.mil/mdr/ns/GSIP/crs/WGS84E_2D"> 40.1541405043668 -122.252401969642 </gml:pos>
+                       <gml:pos gml:srsName="http://metadata.dod.mil/mdr/ns/GSIP/crs/WGS84E_2D"> 40.1547483845221 -122.252401969642 </gml:pos>
+                    </gml:LinearRing>
+                 </gml:exterior>
+              </gml:Polygon>
+          </ddms:boundingGeometry>
+-->
+       </ddms:GeospatialExtent>
+    </ddms:geospatialCoverage>
+    <ddms:security ICISM:classification="U" ICISM:ownerProducer="USA" ICISM:disseminationControls="NONE"/>
+</ddms:Resource>

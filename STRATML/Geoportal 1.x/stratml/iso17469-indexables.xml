@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ Esri Inc. licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!-- esri-arcgis-indexables.xml -->
+<indexables>
+  <!-- schema namespaces -->
+  <namespace prefix="iso17469" uri="urn:ISO:std:iso:17469:tech:xsd:PerformancePlanOrReport"/>
+
+  <property meaning="contentType" xpath="/iso17469:PerformancePlanOrReport/@Type"/>
+    
+  <property meaning="title" xpath="/iso17469:PerformancePlanOrReport/iso17469:Name"/>
+  <property meaning="abstract" xpath="/iso17469:PerformancePlanOrReport/iso17469:Description"/>
+  <property meaning="resource.url" xpath="/iso17469:PerformancePlanOrReport/iso17469:AdministrativeInformation/iso17469:Source"/>
+  <property meaning="dcat.accessUrl" xpath="/iso17469:PerformancePlanOrReport/iso17469:AdministrativeInformation/iso17469:Source"/>
+  <property meaning="publisher" xpath="/iso17469:PerformancePlanOrReport/iso17469:StrategicPlanCore/iso17469:Organization/iso17469:Name"/>
+  <property meaning="mission" xpath="/iso17469:PerformancePlanOrReport/iso17469:StrategicPlanCore/iso17469:Mission/iso17469:Description"/>
+  <property meaning="vision" xpath="/iso17469:PerformancePlanOrReport/iso17469:StrategicPlanCore/iso17469:Goal/iso17469:Description"/>
+  <property meaning="goal" xpath="/iso17469:PerformancePlanOrReport/iso17469:StrategicPlanCore/iso17469:Organization/iso17469:Name"/>
+  <property meaning="objective" xpath="/iso17469:PerformancePlanOrReport/iso17469:StrategicPlanCore/iso17469:Goal/iso17469:Objective[1]/iso17469:Description"/>
+  <property meaning="stakeholder" xpath="//iso17469:Stakeholder/iso17469:Name"/>
+  
+  <property meaning="body" xpathType="STRING" xpath="/*"/>
+  
+  <property meaning="dcat.mbox" xpath="/iso17469:PerformancePlanOrReport/iso17469:Submitter/iso17469:EmailAddress"/>
+  <property meaning="dcat.person" xpath="/iso17469:PerformancePlanOrReport/iso17469:Submitter/iso17469:LastName" />
+  
+  
+</indexables>

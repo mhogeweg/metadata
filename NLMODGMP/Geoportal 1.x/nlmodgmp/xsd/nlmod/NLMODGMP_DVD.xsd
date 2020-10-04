@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--...................................................................
+    Bestand:        XSD voor DHYD
+    Omschrijving:   Metadataprofiel NLMODGMP voor de producent DVD is
+                    verwerkt in deze hoofd XSD
+    Versie:         1.1
+    Auteur:         D. Stoepker | IVENT/A&A/DM3/UNIT2
+    
+    Historie:
+    1.0             06-12-2013
+    1.1             22-01-2014    Wijzigingen doorgevoerd aan status
+                                  naar gmd:MD_ProgressCode
+    ................................................................-->
+  
+<xs:schema xmlns:nmp="http://geoportaal.mindef.nl/nmp" 
+           xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+           xmlns:gco="http://www.isotc211.org/2005/gco" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:gss="http://www.isotc211.org/2005/gss"
+           xmlns:gts="http://www.isotc211.org/2005/gts"
+           targetNamespace="http://geoportaal.mindef.nl/nmp" 
+           elementFormDefault="qualified" version="0.1">
+  
+  <!--...................................................................
+    Imports van de ISO XSD's
+    ................................................................-->
+  <xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd" />
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/spatialRepresentation.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/metadataExtension.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/content.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/citation.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/portrayalCatalogue.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/dataQuality.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gss" schemaLocation="../gss/gss.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gts" schemaLocation="../gts/gts.xsd"/>
+
+  <!--...................................................................
+    Includes van detail XSD's
+    ................................................................-->
+  <xs:include schemaLocation="NLMODGMP_DVD_Detailering.xsd"/>
+
+  <!--...................................................................
+    MD_Metadata beschrijving voor producent DVD
+    ................................................................-->
+  <xs:complexType name="MD_Metadata_Type">    
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="hierarchyLevel" maxOccurs="unbounded" type="gmd:MD_ScopeCode_PropertyType" />
+          <xs:element name="metadataFileIdentifier" type="gco:CharacterString_PropertyType" />
+          <xs:element name="metadataStandardTitle" type="gco:CharacterString_PropertyType" />
+          <xs:element name="metadataStandardEdition" type="gco:CharacterString_PropertyType" />
+          <xs:element name="metadataStandardEditionType" type="gco:CharacterString_PropertyType" />
+          <xs:element name="metadataLanguage" type="gmd:LanguageCode_PropertyType" />
+          <xs:element name="metadataCharacterset" type="gmd:MD_CharacterSetCode_PropertyType" />
+          <xs:element name="metadataPointOfContact" type="nmp:CI_ResponsibleParty_PropertyType" maxOccurs="unbounded" />
+          <xs:element name="metadataDateStamp" type="gco:Date_PropertyType" />
+          <!-- Verdere uitwerking van MD_Identification_PropertyType bij 1. in "NLMODGMP_DVD_Detailering.xsd" -->
+          <xs:element name="identificationInfo" type="nmp:MD_Identification_PropertyType" />
+          <!-- Verdere uitwerking van MD_Distribution_PropertyType bij 2. in "NLMODGMP_DVD_Detailering.xsd" -->
+          <xs:element name="distributionInfo" type="nmp:MD_Distribution_PropertyType" />
+          <!-- Verdere uitwerking van DQ_DataQuality_PropertyType bij 3. in "NLMODGMP_DVD_Detailering.xsd" -->
+          <xs:element name="dataQualityInfo" type="nmp:DQ_DataQuality_PropertyType" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="metadataConstraints">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MD_Constraints">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="securityConstraints">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="MD_SecurityConstraints">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="classification" type="gmd:MD_ClassificationCode_PropertyType"/>
+                                  <xs:element name="classificationSystem" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+                                </xs:sequence>
+                              </xs:complexType>                                
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>        
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <!-- Verdere uitwerking van MD_ReferenceSystem_PropertyType bij 4. in "NLMODGMP_DHYD_Detailering.xsd" -->
+          <xs:element name="referenceSystemInfo" type="nmp:MD_ReferenceSystem_PropertyType" maxOccurs="unbounded" />           
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <!--  ........................................................................ -->
+  <xs:element name="MD_Metadata" type="nmp:MD_Metadata_Type" />
+  <!--  ........................................................................ -->
+  <xs:complexType name="MD_Metadata_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_Metadata" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference" />
+    <xs:attribute ref="gco:nilReason" />
+  </xs:complexType>
+  <!--  =========================================================================== -->
+</xs:schema>

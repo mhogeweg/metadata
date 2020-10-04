@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ Esri Inc. licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<schema key="smis_1.0.2" 
+        templateFile="gpt/metadata/iso/smis/smis-template.xml"
+        cswOutputSchema="http://www.isotc211.org/2005/gmd" 
+        cswBriefXslt="gpt/metadata/iso/smis/smis-brief.xslt" 
+        cswSummaryXslt="gpt/metadata/iso/smis/smis-summary.xslt" 
+        detailsXslt="gpt/metadata/iso/smis/smis-details.xslt" 
+        xsdLocation=""
+        xsdLocationNOT="http://hogeweg.esri.com/data/schema/smis/1.0.2/smis.xsd">
+
+  <!-- schema label -->
+  <label resourceKey="catalog.mdParam.schema.smis_1.0.2"/>
+
+  <!-- schema namespaces -->
+  <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd"/>
+  <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
+  <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco"/>
+  <namespace prefix="gss" uri="http://www.isotc211.org/2005/gss"/>
+  <namespace prefix="gsr" uri="http://www.isotc211.org/2005/gsr"/>
+  <namespace prefix="gts" uri="http://www.isotc211.org/2005/gts"/>
+  <namespace prefix="gml" uri="http://www.opengis.net/gml"/>
+  <namespace prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
+  <namespace prefix="ism" uri="urn:us:gov:ic:ism"/>
+  <namespace prefix="ntk" uri="urn:us:gov:ic:ntk"/>
+  <namespace prefix="sdsfie" uri="http://metadata.ces.mil/dse/ns/DISDI/sdsfie"/>
+  
+  
+  <!-- schema interrogation -->
+  <interrogation count="count(/sdsfie:MD_Metadata)"/>
+  
+  <!-- indexables -->
+  <indexables fileName="gpt/metadata/iso/smis/smis-indexables.xml"/>
+  
+  <!-- Geoportal XML editor -->
+  <editor fileName="gpt/gxe/iso/iso19139/profiles/smis/smis-editor.xml"/>
+  
+</schema>

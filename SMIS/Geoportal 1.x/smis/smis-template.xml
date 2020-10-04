@@ -1,0 +1,2869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdsfie:MD_Metadata xmlns:common="urn:us:gov:ic:common" xmlns:gco="http://www.isotc211.org/2005/gco" 
+xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmi="http://www.isotc211.org/2005/gmi" 
+xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" 
+xmlns:iccve="urn:us:gov:ic:ism-cvenum" xmlns:ism="urn:us:gov:ic:ism" xmlns:ntk="urn:us:gov:ic:ntk" 
+xmlns:sdsfie="http://metadata.ces.mil/dse/ns/DISDI/sdsfie" xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ism:DESVersion="9" ntk:DESVersion="7" ism:resourceElement="true" ism:createDate="2011-10-17" ism:compliesWith="DoD5230.24" ism:classification="U" ism:ownerProducer="">
+	<!--Note that it is necessary to add XML attributes to the root node in order to correctly support DES.ISM.XML. 
+         The root node of any DES.ISM.XML-conformant instance document must specify the version of DES.ISM.XML used. 
+         Additionally, there must be a node that is identified as the "resource node" that would be used to generate 
+         banner marks and the E.O. 12958 classification authority block. 
+         
+         The MD_Metadata node serves as the "resource node" and thus must carry, at a minimum, the necessary identification, 
+         createDate, classification, and ownerProducer XML attributes.
+        
+         - The value of createDate shall be the same as that for the <metadata><Esri><CreaDate> ArcGIS Metadata 1.0 element.
+         - The values of classification, ownerProducer and any additional DES.ISM.XML attributes shall be based on those assigned by the 
+         SDSFIE-M Metadata Editor and as determined by applicable banner and E.O. 12958 classification authority block marking requirements-->
+	<!--Note that it is necessary to add XML attributes to the root node in order to correctly support DES.NTK.XML. 
+         The root node of any DES.NTK.XML-conformant instance document must specify the version of DES.NTK.XML used.-->
+	<gmd:fileIdentifier>
+		<gco:CharacterString>Metadata &gt; Details &gt; File Identifier</gco:CharacterString>
+	</gmd:fileIdentifier>
+	<gmd:language>
+		<gco:CharacterString>eng</gco:CharacterString>
+	</gmd:language>
+	<gmd:characterSet>
+		<gmd:MD_CharacterSetCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
+	</gmd:characterSet>
+	<gmd:parentIdentifier>
+		<gco:CharacterString>Metadata &gt; Details &gt; Parent Identifier</gco:CharacterString>
+	</gmd:parentIdentifier>
+	<gmd:hierarchyLevel>
+		<gmd:MD_ScopeCode codeList="http://metadata.ces.mil/mdr/ns/DISDI/codelist/ScopeCode" codeListValue="005"/>
+	</gmd:hierarchyLevel>
+	<gmd:contact>
+		<gmd:CI_ResponsibleParty>
+			<gmd:individualName>
+				<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Name</gco:CharacterString>
+			</gmd:individualName>
+			<gmd:organisationName>
+				<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Organization</gco:CharacterString>
+			</gmd:organisationName>
+			<gmd:positionName>
+				<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Position</gco:CharacterString>
+			</gmd:positionName>
+			<gmd:contactInfo>
+				<gmd:CI_Contact>
+					<gmd:phone>
+						<gmd:CI_Telephone>
+							<gmd:voice>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Phone</gco:CharacterString>
+							</gmd:voice>
+							<gmd:voice>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Phone + TDD/TTY</gco:CharacterString>
+							</gmd:voice>
+							<gmd:facsimile>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Fax</gco:CharacterString>
+							</gmd:facsimile>
+						</gmd:CI_Telephone>
+					</gmd:phone>
+					<gmd:address>
+						<gmd:CI_Address>
+							<gmd:deliveryPoint>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Address</gco:CharacterString>
+							</gmd:deliveryPoint>
+							<gmd:city>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; City</gco:CharacterString>
+							</gmd:city>
+							<gmd:administrativeArea>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; State</gco:CharacterString>
+							</gmd:administrativeArea>
+							<gmd:postalCode>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Postal Code</gco:CharacterString>
+							</gmd:postalCode>
+							<gmd:country>
+								<gco:CharacterString>US</gco:CharacterString>
+							</gmd:country>
+							<gmd:electronicMailAddress>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+							</gmd:electronicMailAddress>
+						</gmd:CI_Address>
+					</gmd:address>
+					<gmd:onlineResource>
+						<gmd:CI_OnlineResource>
+							<gmd:linkage>
+								<gmd:URL>http://Metadata_Contacts_Contact_Contact_Information_Online_Resource_Linkage</gmd:URL>
+							</gmd:linkage>
+							<gmd:protocol>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Online Resource &gt; Protocol</gco:CharacterString>
+							</gmd:protocol>
+							<gmd:applicationProfile>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Online Resource &gt; Profile</gco:CharacterString>
+							</gmd:applicationProfile>
+							<gmd:name>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Online Resource &gt; Name</gco:CharacterString>
+							</gmd:name>
+							<gmd:description>
+								<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Online Resource &gt; Description</gco:CharacterString>
+							</gmd:description>
+							<gmd:function>
+								<gmd:CI_OnLineFunctionCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/OnlineFunctionCode" codeListValue="information">information</gmd:CI_OnLineFunctionCode>
+							</gmd:function>
+						</gmd:CI_OnlineResource>
+					</gmd:onlineResource>
+					<gmd:hoursOfService>
+						<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Hours</gco:CharacterString>
+					</gmd:hoursOfService>
+					<gmd:contactInstructions>
+						<gco:CharacterString>Metadata &gt; Contacts &gt; Contact &gt; Contact Information &gt; Instructions</gco:CharacterString>
+					</gmd:contactInstructions>
+				</gmd:CI_Contact>
+			</gmd:contactInfo>
+			<gmd:role>
+				<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+			</gmd:role>
+		</gmd:CI_ResponsibleParty>
+	</gmd:contact>
+	<gmd:dateStamp>
+		<gco:Date>2011-10-17</gco:Date>
+	</gmd:dateStamp>
+	<gmd:metadataStandardName>
+		<sdsfie:MetadataStandardNameCode codeList="http://metadata.ces.mil/mdr/ns/DISDI/codelist/MetadataStandardNameCode" codeListValue="sdsfieMetadata"/>
+	</gmd:metadataStandardName>
+	<gmd:metadataStandardVersion>
+		<sdsfie:MetadataStandardVersion>1.0.0</sdsfie:MetadataStandardVersion>
+	</gmd:metadataStandardVersion>
+	<gmd:dataSetURI>
+		<gco:CharacterString>Metadata &gt; Details &gt; Dataset URI (NAP Function Code=Web Map Service)</gco:CharacterString>
+	</gmd:dataSetURI>
+	<gmd:locale>
+		<gmd:PT_Locale>
+			<gmd:languageCode>
+				<gmd:LanguageCode codeList="http://metadata.ces.mil/dse/ns/GPAS/codelist/iso639-3" codeListValue="fre">fre</gmd:LanguageCode>
+			</gmd:languageCode>
+			<gmd:country>
+				<gmd:Country codeList="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" codeListValue="FR">FR</gmd:Country>
+			</gmd:country>
+		</gmd:PT_Locale>
+	</gmd:locale>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_VectorSpatialRepresentation>
+			<gmd:topologyLevel>
+				<gmd:MD_TopologyLevelCode codeList="http://metadata.ces.mil/dse/ns/DISDI/TopologyLevelCode" codeListValue="geometryOnly">geometryOnly</gmd:MD_TopologyLevelCode>
+			</gmd:topologyLevel>
+			<gmd:geometricObjects>
+				<gmd:MD_GeometricObjects>
+					<gmd:geometricObjectType>
+						<gmd:MD_GeometricObjectTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/coldelist/GeometricObjectTypeCode" codeListValue="composite">composite</gmd:MD_GeometricObjectTypeCode>
+					</gmd:geometricObjectType>
+					<gmd:geometricObjectCount>
+						<gco:Integer>3151</gco:Integer>
+					</gmd:geometricObjectCount>
+				</gmd:MD_GeometricObjects>
+			</gmd:geometricObjects>
+		</gmd:MD_VectorSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_VectorSpatialRepresentation>
+			<gmd:topologyLevel>
+				<gmd:MD_TopologyLevelCode codeList="http://metadata.ces.mil/dse/ns/DISDI/TopologyLevelCode" codeListValue="geometryOnly">geometryOnly</gmd:MD_TopologyLevelCode>
+			</gmd:topologyLevel>
+			<gmd:geometricObjects>
+				<gmd:MD_GeometricObjects>
+					<gmd:geometricObjectType>
+						<gmd:MD_GeometricObjectTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/coldelist/GeometricObjectTypeCode" codeListValue="composite">composite</gmd:MD_GeometricObjectTypeCode>
+					</gmd:geometricObjectType>
+					<gmd:geometricObjectCount>
+						<gco:Integer>3151</gco:Integer>
+					</gmd:geometricObjectCount>
+				</gmd:MD_GeometricObjects>
+			</gmd:geometricObjects>
+		</gmd:MD_VectorSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_GridSpatialRepresentation>
+			<gmd:numberOfDimensions>
+				<gco:Integer>1</gco:Integer>
+			</gmd:numberOfDimensions>
+			<gmd:axisDimensionProperties>
+				<gmd:MD_Dimension>
+					<gmd:dimensionName>
+						<gmd:MD_DimensionNameTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DimensionNameTypeCode" codeListValue="track">track</gmd:MD_DimensionNameTypeCode>
+					</gmd:dimensionName>
+					<gmd:dimensionSize>
+						<gco:Integer>35</gco:Integer>
+					</gmd:dimensionSize>
+					<gmd:resolution>
+						<gco:Measure uom="[ft_i]">1.0</gco:Measure>
+					</gmd:resolution>
+				</gmd:MD_Dimension>
+			</gmd:axisDimensionProperties>
+			<gmd:cellGeometry>
+				<gmd:MD_CellGeometryCode codeList="http://metadata.ces.mil/dse/ns/DISDI/CellGeometryCode" codeListValue="point">point</gmd:MD_CellGeometryCode>
+			</gmd:cellGeometry>
+			<gmd:transformationParameterAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:transformationParameterAvailability>
+		</gmd:MD_GridSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_VectorSpatialRepresentation>
+			<gmd:topologyLevel>
+				<gmd:MD_TopologyLevelCode codeList="http://metadata.ces.mil/dse/ns/DISDI/TopologyLevelCode" codeListValue="geometryOnly">geometryOnly</gmd:MD_TopologyLevelCode>
+			</gmd:topologyLevel>
+			<gmd:geometricObjects>
+				<gmd:MD_GeometricObjects>
+					<gmd:geometricObjectType>
+						<gmd:MD_GeometricObjectTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/coldelist/GeometricObjectTypeCode" codeListValue="composite">composite</gmd:MD_GeometricObjectTypeCode>
+					</gmd:geometricObjectType>
+					<gmd:geometricObjectCount>
+						<gco:Integer>3151</gco:Integer>
+					</gmd:geometricObjectCount>
+				</gmd:MD_GeometricObjects>
+			</gmd:geometricObjects>
+		</gmd:MD_VectorSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_Georectified>
+			<gmd:numberOfDimensions>
+				<gco:Integer>3</gco:Integer>
+			</gmd:numberOfDimensions>
+			<gmd:axisDimensionProperties>
+				<gmd:MD_Dimension>
+					<gmd:dimensionName>
+						<gmd:MD_DimensionNameTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DimensionNameTypeCode" codeListValue="row">row</gmd:MD_DimensionNameTypeCode>
+					</gmd:dimensionName>
+					<gmd:dimensionSize>
+						<gco:Integer>150</gco:Integer>
+					</gmd:dimensionSize>
+					<gmd:resolution>
+						<gco:Measure uom="m">5.0</gco:Measure>
+					</gmd:resolution>
+				</gmd:MD_Dimension>
+			</gmd:axisDimensionProperties>
+			<gmd:axisDimensionProperties>
+				<gmd:MD_Dimension>
+					<gmd:dimensionName>
+						<gmd:MD_DimensionNameTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DimensionNameTypeCode" codeListValue="column">column</gmd:MD_DimensionNameTypeCode>
+					</gmd:dimensionName>
+					<gmd:dimensionSize>
+						<gco:Integer>259</gco:Integer>
+					</gmd:dimensionSize>
+					<gmd:resolution>
+						<gco:Measure uom="m">10.0</gco:Measure>
+					</gmd:resolution>
+				</gmd:MD_Dimension>
+			</gmd:axisDimensionProperties>
+			<gmd:axisDimensionProperties>
+				<gmd:MD_Dimension>
+					<gmd:dimensionName>
+						<gmd:MD_DimensionNameTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DimensionNameTypeCode" codeListValue="vertical">vertical</gmd:MD_DimensionNameTypeCode>
+					</gmd:dimensionName>
+					<gmd:dimensionSize>
+						<gco:Integer>20</gco:Integer>
+					</gmd:dimensionSize>
+					<gmd:resolution>
+						<gco:Measure uom="m">0.1</gco:Measure>
+					</gmd:resolution>
+				</gmd:MD_Dimension>
+			</gmd:axisDimensionProperties>
+			<gmd:cellGeometry>
+				<gmd:MD_CellGeometryCode codeList="http://metadata.ces.mil/dse/ns/DISDI/CellGeometryCode" codeListValue="area">area</gmd:MD_CellGeometryCode>
+			</gmd:cellGeometry>
+			<gmd:transformationParameterAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:transformationParameterAvailability>
+			<gmd:checkPointAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:checkPointAvailability>
+			<gmd:checkPointDescription>
+				<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georectified &gt; Check Point Description</gco:CharacterString>
+			</gmd:checkPointDescription>
+			<gmd:cornerPoints>
+				<gml:Point gml:id="idcornerPtsx2x1590">
+					<gml:description>Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Description</gml:description>
+					<gml:descriptionReference xlink:href="Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Reference"/>
+					<gml:identifier codeSpace="Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Identifier Codespace">Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Identifier</gml:identifier>
+					<gml:pos>1.0 1.0</gml:pos>
+				</gml:Point>
+			</gmd:cornerPoints>
+			<gmd:cornerPoints>
+				<gml:Point gml:id="idcornerPtsx2x1633">
+					<gml:description>Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Description</gml:description>
+					<gml:descriptionReference xlink:href="Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Reference"/>
+					<gml:identifier codeSpace="Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Identifier Codespace">Resource &gt; Spatial Data Representation &gt; Georectified &gt; Corner Point &gt; Identifier</gml:identifier>
+					<gml:pos>7.0 7.0</gml:pos>
+				</gml:Point>
+			</gmd:cornerPoints>
+			<gmd:centerPoint>
+				<gml:Point gml:id="idcenterPtx2x1600">
+					<gml:description>Resource &gt; Spatial Data Representation &gt; Georectified &gt; Center Point &gt; Description</gml:description>
+					<gml:descriptionReference xlink:href="Resource &gt; Spatial Data Representation &gt; Georectified &gt; Center Point &gt; Reference"/>
+					<gml:identifier codeSpace="Resource &gt; Spatial Data Representation &gt; Georectified &gt; Center Point &gt; Identifier Codespace">Resource &gt; Spatial Data Representation &gt; Georectified &gt; Center Point &gt; Identifier</gml:identifier>
+					<gml:pos>4.0 4.0</gml:pos>
+				</gml:Point>
+			</gmd:centerPoint>
+			<gmd:pointInPixel>
+				<gmd:MD_PixelOrientationCode>upperLeft</gmd:MD_PixelOrientationCode>
+			</gmd:pointInPixel>
+			<gmd:transformationDimensionDescription>
+				<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georectified &gt; Transformation Dimension Description</gco:CharacterString>
+			</gmd:transformationDimensionDescription>
+			<gmd:transformationDimensionMapping>
+				<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georectified &gt; Transformation Dimension Mapping</gco:CharacterString>
+			</gmd:transformationDimensionMapping>
+		</gmd:MD_Georectified>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_VectorSpatialRepresentation>
+			<gmd:topologyLevel>
+				<gmd:MD_TopologyLevelCode codeList="http://metadata.ces.mil/dse/ns/DISDI/TopologyLevelCode" codeListValue="geometryOnly">geometryOnly</gmd:MD_TopologyLevelCode>
+			</gmd:topologyLevel>
+			<gmd:geometricObjects>
+				<gmd:MD_GeometricObjects>
+					<gmd:geometricObjectType>
+						<gmd:MD_GeometricObjectTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/coldelist/GeometricObjectTypeCode" codeListValue="composite">composite</gmd:MD_GeometricObjectTypeCode>
+					</gmd:geometricObjectType>
+					<gmd:geometricObjectCount>
+						<gco:Integer>3151</gco:Integer>
+					</gmd:geometricObjectCount>
+				</gmd:MD_GeometricObjects>
+			</gmd:geometricObjects>
+		</gmd:MD_VectorSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_Georeferenceable>
+			<gmd:numberOfDimensions>
+				<gco:Integer>1</gco:Integer>
+			</gmd:numberOfDimensions>
+			<gmd:axisDimensionProperties>
+				<gmd:MD_Dimension>
+					<gmd:dimensionName>
+						<gmd:MD_DimensionNameTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DimensionNameTypeCode" codeListValue="time">time</gmd:MD_DimensionNameTypeCode>
+					</gmd:dimensionName>
+					<gmd:dimensionSize>
+						<gco:Integer>140</gco:Integer>
+					</gmd:dimensionSize>
+					<gmd:resolution>
+						<gco:Measure uom="h">1</gco:Measure>
+					</gmd:resolution>
+				</gmd:MD_Dimension>
+			</gmd:axisDimensionProperties>
+			<gmd:cellGeometry>
+				<gmd:MD_CellGeometryCode codeList="http://metadata.ces.mil/dse/ns/DISDI/CellGeometryCode" codeListValue="point">point</gmd:MD_CellGeometryCode>
+			</gmd:cellGeometry>
+			<gmd:transformationParameterAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:transformationParameterAvailability>
+			<gmd:controlPointAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:controlPointAvailability>
+			<gmd:orientationParameterAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:orientationParameterAvailability>
+			<gmd:orientationParameterDescription>
+				<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georeferenceable &gt; Orientation Parameter Description</gco:CharacterString>
+			</gmd:orientationParameterDescription>
+			<gmd:georeferencedParameters>
+				<gco:Record>Resource &gt; Spatial Data Representation &gt; Georeferenceable &gt; Georeferenced Parameters</gco:Record>
+			</gmd:georeferencedParameters>
+			<gmd:parameterCitation>
+				<gmd:CI_Citation>
+					<gmd:title>
+						<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georeferenceable &gt; Parameter Citation &gt; Titles &gt; Title</gco:CharacterString>
+					</gmd:title>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-01-01</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:citedResponsibleParty>
+						<gmd:CI_ResponsibleParty>
+							<gmd:organisationName>
+								<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georeferenceable &gt; Parameter Citation &gt; Contact &gt; Organization</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georeferenceable &gt; Parameter Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:citedResponsibleParty>
+					<gmd:onlineResource>
+						<gmd:CI_OnlineResource>
+							<gmd:linkage>
+								<gmd:URL>http://Resource_Spatial_Data_Representation_Georeferenceable_Parameter_Citation_Online_Resource_Linkage</gmd:URL>
+							</gmd:linkage>
+							<gmd:protocol>
+								<gco:CharacterString>Resource &gt; Spatial Data Representation &gt; Georeferenceable &gt; Parameter Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+							</gmd:protocol>
+						</gmd:CI_OnlineResource>
+					</gmd:onlineResource>
+				</gmd:CI_Citation>
+			</gmd:parameterCitation>
+		</gmd:MD_Georeferenceable>
+	</gmd:spatialRepresentationInfo>
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_VectorSpatialRepresentation>
+			<gmd:topologyLevel>
+				<gmd:MD_TopologyLevelCode codeList="http://metadata.ces.mil/dse/ns/DISDI/TopologyLevelCode" codeListValue="geometryOnly">geometryOnly</gmd:MD_TopologyLevelCode>
+			</gmd:topologyLevel>
+			<gmd:geometricObjects>
+				<gmd:MD_GeometricObjects>
+					<gmd:geometricObjectType>
+						<gmd:MD_GeometricObjectTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/coldelist/GeometricObjectTypeCode" codeListValue="composite">composite</gmd:MD_GeometricObjectTypeCode>
+					</gmd:geometricObjectType>
+					<gmd:geometricObjectCount>
+						<gco:Integer>3151</gco:Integer>
+					</gmd:geometricObjectCount>
+				</gmd:MD_GeometricObjects>
+			</gmd:geometricObjects>
+		</gmd:MD_VectorSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:referenceSystemInfo>
+		<gmd:MD_ReferenceSystem>
+			<gmd:referenceSystemIdentifier>
+				<gmd:RS_Identifier>
+					<gmd:authority>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Authority Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2011-07-01</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Authority Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Resource_Spatial_Reference_Reference_System_Authority_Citation_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Authority Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:authority>
+					<gmd:code>
+						<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Code</gco:CharacterString>
+					</gmd:code>
+					<gmd:codeSpace>
+						<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Code Space</gco:CharacterString>
+					</gmd:codeSpace>
+					<gmd:version>
+						<gco:CharacterString>Resource &gt; Spatial Reference &gt; Reference System &gt; Version</gco:CharacterString>
+					</gmd:version>
+				</gmd:RS_Identifier>
+			</gmd:referenceSystemIdentifier>
+		</gmd:MD_ReferenceSystem>
+	</gmd:referenceSystemInfo>
+	<gmd:identificationInfo>
+		<gmd:MD_DataIdentification>
+			<gmd:citation>
+				<gmd:CI_Citation>
+					<gmd:title xsi:type="PT_FreeText_PropertyType">
+						<gco:CharacterString>Overview &gt; Item Description &gt; Title + Overview &gt; Citation &gt; Titles &gt; Title</gco:CharacterString>
+						<gmd:PT_FreeText>
+							<gmd:textGroup>
+								<gmd:LocalisedCharacterString locale="fre-FR">Overview &gt; Locales &gt; Locale &gt; Title</gmd:LocalisedCharacterString>
+							</gmd:textGroup>
+						</gmd:PT_FreeText>
+					</gmd:title>
+					<gmd:alternateTitle>
+						<gco:CharacterString>Overview &gt; Citation &gt; Titles &gt; Alternate Title</gco:CharacterString>
+					</gmd:alternateTitle>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:DateTime>1993-01-01T23:59:59</gco:DateTime>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:DateTime>1994-01-01T06:00:00</gco:DateTime>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:DateTime>1995-01-01T18:30:59</gco:DateTime>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-09-01</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="notAvailable">notAvailable</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-09-02</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="inForce">inForce</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-09-03</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="adopted">adopted</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-09-04</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="deprecated">deprecated</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-09-05</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="superseded">superseded</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:edition>
+						<gco:CharacterString>Overview &gt; Citation &gt; Edition &gt; Edition</gco:CharacterString>
+					</gmd:edition>
+					<gmd:editionDate>
+						<gco:Date>2011-01-01</gco:Date>
+					</gmd:editionDate>
+					<gmd:identifier>
+						<gmd:MD_Identifier>
+							<gmd:authority>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Overview &gt; Citation &gt; Identifier &gt; Authority Citation &gt; Titles &gt; Title</gco:CharacterString>
+									</gmd:title>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2010-01-01</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+									<gmd:citedResponsibleParty>
+										<gmd:CI_ResponsibleParty>
+											<gmd:organisationName>
+												<gco:CharacterString>Overview &gt; Citation &gt; Identifier &gt; Authority Citation &gt; Contact &gt; Organization</gco:CharacterString>
+											</gmd:organisationName>
+											<gmd:contactInfo>
+												<gmd:CI_Contact>
+													<gmd:address>
+														<gmd:CI_Address>
+															<gmd:electronicMailAddress>
+																<gco:CharacterString>Overview &gt; Citation &gt; Identifier &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+															</gmd:electronicMailAddress>
+														</gmd:CI_Address>
+													</gmd:address>
+												</gmd:CI_Contact>
+											</gmd:contactInfo>
+											<gmd:role>
+												<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+											</gmd:role>
+										</gmd:CI_ResponsibleParty>
+									</gmd:citedResponsibleParty>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>http://Overview_Citation_Identifier_Authority_Citation_Online_Resource_Linkage</gmd:URL>
+											</gmd:linkage>
+											<gmd:protocol>
+												<gco:CharacterString>Overview &gt; Citation &gt; Identifier &gt; Authority Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+											</gmd:protocol>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Citation>
+							</gmd:authority>
+							<gmd:code>
+								<gco:CharacterString>Overview &gt; Citation &gt; Identifier &gt; Code</gco:CharacterString>
+							</gmd:code>
+						</gmd:MD_Identifier>
+					</gmd:identifier>
+					<gmd:citedResponsibleParty>
+						<gmd:CI_ResponsibleParty>
+							<gmd:individualName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Name (Role=Originator)</gco:CharacterString>
+							</gmd:individualName>
+							<gmd:organisationName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Organization (Role=Originator)</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:positionName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Position (Role=Originator)</gco:CharacterString>
+							</gmd:positionName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:phone>
+										<gmd:CI_Telephone>
+											<gmd:voice>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Phone (Role=Originator)</gco:CharacterString>
+											</gmd:voice>
+										</gmd:CI_Telephone>
+									</gmd:phone>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:deliveryPoint>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Address (Role=Originator)</gco:CharacterString>
+											</gmd:deliveryPoint>
+											<gmd:city>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; City (Role=Originator)</gco:CharacterString>
+											</gmd:city>
+											<gmd:administrativeArea>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; State (Role=Originator)</gco:CharacterString>
+											</gmd:administrativeArea>
+											<gmd:postalCode>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Postal Code (Role=Originator)</gco:CharacterString>
+											</gmd:postalCode>
+											<gmd:country>
+												<gco:CharacterString>US</gco:CharacterString>
+											</gmd:country>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Email (Role=Originator)</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:citedResponsibleParty>
+					<gmd:citedResponsibleParty>
+						<gmd:CI_ResponsibleParty>
+							<gmd:individualName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Name (Role=Publisher)</gco:CharacterString>
+							</gmd:individualName>
+							<gmd:organisationName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Organization (Role=Publisher)</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:positionName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Position (Role=Publisher)</gco:CharacterString>
+							</gmd:positionName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:deliveryPoint>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Address (Role=Publisher)</gco:CharacterString>
+											</gmd:deliveryPoint>
+											<gmd:city>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; City (Role=Publisher)</gco:CharacterString>
+											</gmd:city>
+											<gmd:administrativeArea>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; State (Role=Publisher)</gco:CharacterString>
+											</gmd:administrativeArea>
+											<gmd:postalCode>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Postal Code (Role=Publisher)</gco:CharacterString>
+											</gmd:postalCode>
+											<gmd:country>
+												<gco:CharacterString>US</gco:CharacterString>
+											</gmd:country>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Email (Role=Publisher)</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:citedResponsibleParty>
+					<gmd:citedResponsibleParty>
+						<gmd:CI_ResponsibleParty>
+							<gmd:individualName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Name (NAP Role=Rights Holder)</gco:CharacterString>
+							</gmd:individualName>
+							<gmd:organisationName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Organization (NAP Role=Rights Holder)</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:positionName>
+								<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Position (NAP Role=Rights Holder)</gco:CharacterString>
+							</gmd:positionName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:phone>
+										<gmd:CI_Telephone>
+											<gmd:voice>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Phone (NAP Role=Rights Holder)</gco:CharacterString>
+											</gmd:voice>
+										</gmd:CI_Telephone>
+									</gmd:phone>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:deliveryPoint>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Address (NAP Role=Rights Holder)</gco:CharacterString>
+											</gmd:deliveryPoint>
+											<gmd:city>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; City (NAP Role=Rights Holder)</gco:CharacterString>
+											</gmd:city>
+											<gmd:administrativeArea>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; State (NAP Role=Rights Holder)</gco:CharacterString>
+											</gmd:administrativeArea>
+											<gmd:postalCode>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Postal Code (NAP Role=Rights Holder)</gco:CharacterString>
+											</gmd:postalCode>
+											<gmd:country>
+												<gco:CharacterString>US</gco:CharacterString>
+											</gmd:country>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Overview &gt; Citation Contacts &gt; Contact &gt; Contact Information &gt; Email (NAP Role=Rights Holder)</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="rightsHolder">rightsHolder</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:citedResponsibleParty>
+					<gmd:presentationForm>
+						<gmd:CI_PresentationFormCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/PresentationFormCode" codeListValue="mapDigital">mapDigital</gmd:CI_PresentationFormCode>
+					</gmd:presentationForm>
+					<gmd:series>
+						<gmd:CI_Series>
+							<gmd:name>
+								<gco:CharacterString>Overview &gt; Citation &gt; Series &gt; Name</gco:CharacterString>
+							</gmd:name>
+							<gmd:issueIdentification>
+								<gco:CharacterString>Overview &gt; Citation &gt; Series &gt; Issue</gco:CharacterString>
+							</gmd:issueIdentification>
+							<gmd:page>
+								<gco:CharacterString>Overview &gt; Citation &gt; Series &gt; Page</gco:CharacterString>
+							</gmd:page>
+						</gmd:CI_Series>
+					</gmd:series>
+					<gmd:otherCitationDetails>
+						<gco:CharacterString>Overview &gt; Citation &gt; Other Details</gco:CharacterString>
+					</gmd:otherCitationDetails>
+					<gmd:collectiveTitle>
+						<gco:CharacterString>Overview &gt; Citation &gt; Titles &gt; Collective Title</gco:CharacterString>
+					</gmd:collectiveTitle>
+					<gmd:ISBN>
+						<gco:CharacterString>Overview &gt; Citation &gt; ISBN</gco:CharacterString>
+					</gmd:ISBN>
+					<gmd:ISSN>
+						<gco:CharacterString>Overview &gt; Citation &gt; ISSN</gco:CharacterString>
+					</gmd:ISSN>
+				</gmd:CI_Citation>
+			</gmd:citation>
+			<gmd:abstract xsi:type="PT_FreeText_PropertyType">
+				<gco:CharacterString>Overview &amp;gt; Item Description &amp;gt; Description/Abstract</gco:CharacterString>
+				<PT_FreeText>
+					<textGroup>
+						<LocalisedCharacterString locale="fre-FR">Overview &gt; Locales &gt; Locale &gt; Abstract</LocalisedCharacterString>
+					</textGroup>
+				</PT_FreeText>
+			</gmd:abstract>
+			<gmd:purpose>
+				<gco:CharacterString>Overview &gt; Item Description &gt; Summary/Purpose</gco:CharacterString>
+			</gmd:purpose>
+			<gmd:credit>
+				<gco:CharacterString>Overview &gt; Item Description &gt; Credits + Resource &gt; Details &gt; Credit</gco:CharacterString>
+			</gmd:credit>
+			<gmd:status>
+				<gmd:MD_ProgressCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/ProgressCode" codeListValue="004">004</gmd:MD_ProgressCode>
+			</gmd:status>
+			<gmd:pointOfContact>
+				<gmd:CI_ResponsibleParty>
+					<gmd:individualName>
+						<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Name</gco:CharacterString>
+					</gmd:individualName>
+					<gmd:contactInfo>
+						<gmd:CI_Contact>
+							<gmd:phone>
+								<gmd:CI_Telephone>
+									<gmd:voice>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; Phone</gco:CharacterString>
+									</gmd:voice>
+								</gmd:CI_Telephone>
+							</gmd:phone>
+							<gmd:address>
+								<gmd:CI_Address>
+									<gmd:deliveryPoint>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; Address</gco:CharacterString>
+									</gmd:deliveryPoint>
+									<gmd:city>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; City</gco:CharacterString>
+									</gmd:city>
+									<gmd:administrativeArea>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; State</gco:CharacterString>
+									</gmd:administrativeArea>
+									<gmd:postalCode>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; Zip</gco:CharacterString>
+									</gmd:postalCode>
+									<gmd:country>
+										<gco:CharacterString>US</gco:CharacterString>
+									</gmd:country>
+									<gmd:electronicMailAddress>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+									</gmd:electronicMailAddress>
+								</gmd:CI_Address>
+							</gmd:address>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Resource_Points_of_Contact_Contact_Contact_Information_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Resource &gt; Points of Contact &gt; Contact &gt; Contact Information &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Contact>
+					</gmd:contactInfo>
+					<gmd:role>
+						<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+					</gmd:role>
+				</gmd:CI_ResponsibleParty>
+			</gmd:pointOfContact>
+			<gmd:resourceMaintenance>
+				<gmd:MD_MaintenanceInformation>
+					<gmd:maintenanceAndUpdateFrequency>
+						<gmd:MD_MaintenanceFrequencyCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</gmd:MD_MaintenanceFrequencyCode>
+					</gmd:maintenanceAndUpdateFrequency>
+					<gmd:dateOfNextUpdate>
+						<gco:Date>2012-01-01</gco:Date>
+					</gmd:dateOfNextUpdate>
+					<gmd:userDefinedMaintenanceFrequency>
+						<gts:TM_PeriodDuration>P36DT12H</gts:TM_PeriodDuration>
+					</gmd:userDefinedMaintenanceFrequency>
+					<gmd:updateScope>
+						<gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
+					</gmd:updateScope>
+					<gmd:updateScopeDescription>
+						<gmd:MD_ScopeDescription>
+							<gmd:dataset>
+								<gco:CharacterString>Resource &gt; Maintenance &gt; Scope Description &gt; Dataset</gco:CharacterString>
+							</gmd:dataset>
+						</gmd:MD_ScopeDescription>
+					</gmd:updateScopeDescription>
+					<gmd:maintenanceNote>
+						<gco:CharacterString>Resource &gt; Maintenance &gt; Maintenance Note</gco:CharacterString>
+					</gmd:maintenanceNote>
+					<gmd:contact>
+						<gmd:CI_ResponsibleParty>
+							<gmd:individualName>
+								<gco:CharacterString>Resource &gt; Maintenance &gt; Contact &gt; Name</gco:CharacterString>
+							</gmd:individualName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Resource &gt; Maintenance &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:contact>
+				</gmd:MD_MaintenanceInformation>
+			</gmd:resourceMaintenance>
+			<gmd:graphicOverview>
+				<gmd:MD_BrowseGraphic>
+					<gmd:fileName>
+						<gco:CharacterString>Resource &gt; Details &gt; Browse Graphic &gt; File Name</gco:CharacterString>
+					</gmd:fileName>
+					<gmd:fileDescription>
+						<gco:CharacterString>Resource &gt; Details &gt; Browse Graphic &gt; Description</gco:CharacterString>
+					</gmd:fileDescription>
+					<gmd:fileType>
+						<gco:CharacterString>Resource &gt; Details &gt; Browse Graphic &gt; File Type</gco:CharacterString>
+					</gmd:fileType>
+				</gmd:MD_BrowseGraphic>
+			</gmd:graphicOverview>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Discipline Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Discipline Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="discipline" codeSpace="ISOTC211/19115">discipline</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Discipline Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2007-02-12</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Discipline Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Discipline Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Place Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Place Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="place" codeSpace="ISOTC211/19115">place</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Place Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2010-01-01</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Place Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Place Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Overview_Topics_Keywords_Place_Keywords_Thesaurus_Citation_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Place Keywords &gt; Thesaurus Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Stratum Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Stratum Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="stratum" codeSpace="ISOTC211/19115">stratum</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Stratum Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>1988-08-26</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Stratum Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Stratum Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Temporal Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Temporal Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="temporal" codeSpace="ISOTC211/19115">temporal</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Temporal Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>1996-08-22</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Temporal Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Temporal Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Overview_Topics_Keywords_Temporal_Keywords_Thesaurus_Citation_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Temporal Keywords &gt; Thesaurus Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Theme Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Theme Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme" codeSpace="ISOTC211/19115">theme</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Theme Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2010-01-01</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Theme Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Theme Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Overview_Topics_Keywords_Theme_Keywords_Thesaurus_Citation_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Theme Keywords &gt; Thesaurus Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Product Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Product Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.fgdc.gov/nap/metadata/register/codelists.html#napMD_KeywordTypeCode" codeListValue="product" codeSpace="ISOTC211/19139/NAP">product</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Product Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2011-10-13</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Product Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Product Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Subtopic Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Subtopic Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeList="http://www.fgdc.gov/nap/metadata/register/codelists.html#napMD_KeywordTypeCode" codeListValue="subTopicCategory" codeSpace="ISOTC211/19139/NAP">subTopicCategory</gmd:MD_KeywordTypeCode>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Subtopic Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2011-10-14</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Subtopic Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Subtopic Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Other Keywords &gt; Keyword1</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:keyword>
+						<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Other Keywords &gt; Keyword2</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Other Keywords &gt; Thesaurus Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2010-05-10</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Other Keywords &gt; Thesaurus Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Other Keywords &gt; Thesaurus Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Overview_Topics_Keywords_Other_Keywords_Thesaurus_Citation_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Overview &gt; Topics &amp; Keywords &gt; Other Keywords &gt; Thesaurus Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<gmd:keyword>
+						<gco:CharacterString>Offline Data</gco:CharacterString>
+					</gmd:keyword>
+					<gmd:thesaurusName uuidref="723f6998-058e-11dc-8314-0800200c9a66"/>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			<gmd:resourceConstraints>
+				<gmd:MD_Constraints>
+					<gmd:useLimitation>
+						<gco:CharacterString>Overview &amp;gt; Item Description &amp;gt; Use Limitation + Resource &amp;gt; Constraints &amp;gt; General Constraints &amp;gt; Use Limitation</gco:CharacterString>
+					</gmd:useLimitation>
+				</gmd:MD_Constraints>
+			</gmd:resourceConstraints>
+			<gmd:resourceConstraints>
+				<sdsfie:MD_LegalConstraints>
+					<gmd:useLimitation>
+						<gco:CharacterString>Resource &gt; Constraints &gt; Legal Constraints &gt; Use Limitation</gco:CharacterString>
+					</gmd:useLimitation>
+					<gmd:accessConstraints>
+						<gmd:MD_RestrictionCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RestrictionCode" codeListValue="005">005</gmd:MD_RestrictionCode>
+					</gmd:accessConstraints>
+					<gmd:useConstraints>
+						<gmd:MD_RestrictionCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RestrictionCode" codeListValue="008">008</gmd:MD_RestrictionCode>
+					</gmd:useConstraints>
+					<sdsfie:furtherExplanation>
+						<gco:CharacterString>Resource &gt; Constraints &gt; Legal Constraints &gt; Other Constraints</gco:CharacterString>
+					</sdsfie:furtherExplanation>
+				</sdsfie:MD_LegalConstraints>
+			</gmd:resourceConstraints>
+			<gmd:resourceConstraints>
+				<sdsfie:MD_SecurityConstraints>
+					<gmd:useLimitation>
+						<gco:CharacterString>Resource &gt; Constraints &gt; Security Constraints &gt; Use Limitation</gco:CharacterString>
+					</gmd:useLimitation>
+					<classification xmlns="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml" xmlns:srv="http://www.isotc211.org/2005/srv">
+						<MD_ClassificationCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/ClassificationCode" codeListValue="R" codeSpace="DISDI">R</MD_ClassificationCode>
+					</classification>
+					<gmd:userNotes>
+						<gco:CharacterString>Resource &gt; Constraints &gt; Security Constraints &gt; User Note</gco:CharacterString>
+					</gmd:userNotes>
+					<gmd:classificationSystem>
+						<gco:CharacterString>US CAPCO</gco:CharacterString>
+					</gmd:classificationSystem>
+					<gmd:handlingDescription>
+						<gco:CharacterString>Resource &gt; Constraints &gt; Security Constraints &gt; Handling Description</gco:CharacterString>
+					</gmd:handlingDescription>
+					<sdsfie:capcoMarking ism:classification="R" ism:ownerProducer=""/>
+				</sdsfie:MD_SecurityConstraints>
+			</gmd:resourceConstraints>
+			<gmd:aggregationInfo>
+				<gmd:MD_AggregateInformation>
+					<gmd:aggregateDataSetName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Titles &gt; Title (Association=Cross Reference)</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2006-06-01</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:individualName>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Contact &gt; Name (Association=Cross Reference)</gco:CharacterString>
+									</gmd:individualName>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Contact &gt; Organization (Association=Cross Reference)</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Contact &gt; Contact Information &gt; Email (Association=Cross Reference)</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Resource_References_Aggregate_Information_Dataset_Citation_Online_Resource_Linkage_Association=Cross_Reference</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Online Resource &gt; Protocol (Association=Cross Reference)</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:aggregateDataSetName>
+					<gmd:aggregateDataSetIdentifier>
+						<gmd:MD_Identifier>
+							<gmd:authority>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Identifier &gt; Authority Citation &gt; Titles &gt; Title (Association=Cross Reference)</gco:CharacterString>
+									</gmd:title>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2009-05-15</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+									<gmd:citedResponsibleParty>
+										<gmd:CI_ResponsibleParty>
+											<gmd:organisationName>
+												<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Identifier &gt; Authority Citation &gt; Contact &gt; Organization (Association=Cross Reference)</gco:CharacterString>
+											</gmd:organisationName>
+											<gmd:contactInfo>
+												<gmd:CI_Contact>
+													<gmd:address>
+														<gmd:CI_Address>
+															<gmd:electronicMailAddress>
+																<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Identifier &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email (Association=Cross Reference)</gco:CharacterString>
+															</gmd:electronicMailAddress>
+														</gmd:CI_Address>
+													</gmd:address>
+												</gmd:CI_Contact>
+											</gmd:contactInfo>
+											<gmd:role>
+												<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+											</gmd:role>
+										</gmd:CI_ResponsibleParty>
+									</gmd:citedResponsibleParty>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>http://Resource_References_Aggregate_Information_Identifier_Authority_Citation_Online_Resource_Linkage_Association=Cross_Reference</gmd:URL>
+											</gmd:linkage>
+											<gmd:protocol>
+												<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Identifier &gt; Authority Citation &gt; Online Resource &gt; Protocol (Association=Cross Reference)</gco:CharacterString>
+											</gmd:protocol>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Citation>
+							</gmd:authority>
+							<gmd:code>
+								<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Identifier &gt; Code (Association=Cross Reference)</gco:CharacterString>
+							</gmd:code>
+						</gmd:MD_Identifier>
+					</gmd:aggregateDataSetIdentifier>
+					<gmd:associationType>
+						<gmd:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="crossReference" codeSpace="ISOTC211/19115">crossReference</gmd:DS_AssociationTypeCode>
+					</gmd:associationType>
+					<gmd:initiativeType>
+						<gmd:DS_InitiativeTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_InitiativeTypeCode" codeListValue="investigation" codeSpace="ISOTC211/19115">investigation</gmd:DS_InitiativeTypeCode>
+					</gmd:initiativeType>
+				</gmd:MD_AggregateInformation>
+			</gmd:aggregationInfo>
+			<gmd:aggregationInfo>
+				<gmd:MD_AggregateInformation>
+					<gmd:aggregateDataSetName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Titles &gt; Title (Association=Larger Work)</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2003-09-18</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:individualName>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Contact &gt; Name (Association=Larger Work)</gco:CharacterString>
+									</gmd:individualName>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Contact &gt; Organization (Association=Larger Work)</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Contact &gt; Contact Information &gt; Email (Association=Larger Work)</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Resource_References_Aggregate_Information_Dataset_Citation_Online_Resource_Linkage_Association=Larger_Work</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Resource &gt; References &gt; Aggregate Information &gt; Dataset Citation &gt; Online Resource &gt; Protocol (Association=Larger Work)</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:aggregateDataSetName>
+					<gmd:associationType>
+						<gmd:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DS_AssociationTypeCode" codeListValue="largerWorkCitation" codeSpace="ISOTC211/19115">largerWorkCitation</gmd:DS_AssociationTypeCode>
+					</gmd:associationType>
+				</gmd:MD_AggregateInformation>
+			</gmd:aggregationInfo>
+			<gmd:spatialRepresentationType>
+				<gmd:MD_SpatialRepresentationTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/SpatialRepresentationTypeCode" codeListValue="vector">vector</gmd:MD_SpatialRepresentationTypeCode>
+			</gmd:spatialRepresentationType>
+			<gmd:spatialRepresentationType>
+				<gmd:MD_SpatialRepresentationTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/SpatialRepresentationTypeCode" codeListValue="grid">grid</gmd:MD_SpatialRepresentationTypeCode>
+			</gmd:spatialRepresentationType>
+			<gmd:spatialResolution>
+				<gmd:MD_Resolution>
+					<gmd:equivalentScale>
+						<gmd:MD_RepresentativeFraction>
+							<gmd:denominator>
+								<gco:Integer>24000</gco:Integer>
+							</gmd:denominator>
+						</gmd:MD_RepresentativeFraction>
+					</gmd:equivalentScale>
+				</gmd:MD_Resolution>
+			</gmd:spatialResolution>
+			<gmd:spatialResolution>
+				<gmd:MD_Resolution>
+					<gmd:distance>
+						<gco:Distance uom="m">0.001</gco:Distance>
+					</gmd:distance>
+				</gmd:MD_Resolution>
+			</gmd:spatialResolution>
+			<gmd:language>
+				<gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="spa" codeSpace="ISO639-2">spa</gmd:LanguageCode>
+			</gmd:language>
+			<gmd:characterSet>
+				<gmd:MD_CharacterSetCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/CharacterSetCode" codeListValue="utf16">utf16</gmd:MD_CharacterSetCode>
+			</gmd:characterSet>
+			<gmd:topicCategory>
+				<gmd:MD_TopicCategoryCode>geoscientificInformation</gmd:MD_TopicCategoryCode>
+			</gmd:topicCategory>
+			<gmd:topicCategory>
+				<gmd:MD_TopicCategoryCode>imageryBaseMapsEarthCover</gmd:MD_TopicCategoryCode>
+			</gmd:topicCategory>
+			<gmd:environmentDescription>
+				<gco:CharacterString>Resource &gt; Details &gt; Processing Environment</gco:CharacterString>
+			</gmd:environmentDescription>
+			<gmd:extent>
+				<gmd:EX_Extent>
+					<gmd:description>
+						<gco:CharacterString>Resource &gt; Extents &gt; Extent &gt; Description
+
+Bounding boxes created on the Extents page do not have the esriExtentType attribute.</gco:CharacterString>
+					</gmd:description>
+					<gmd:geographicElement>
+						<gmd:EX_GeographicBoundingBox>
+							<gmd:extentTypeCode>
+								<gco:Boolean>true</gco:Boolean>
+							</gmd:extentTypeCode>
+							<gmd:westBoundLongitude>
+								<gco:Decimal>-155</gco:Decimal>
+							</gmd:westBoundLongitude>
+							<gmd:eastBoundLongitude>
+								<gco:Decimal>-135</gco:Decimal>
+							</gmd:eastBoundLongitude>
+							<gmd:southBoundLatitude>
+								<gco:Decimal>35</gco:Decimal>
+							</gmd:southBoundLatitude>
+							<gmd:northBoundLatitude>
+								<gco:Decimal>42</gco:Decimal>
+							</gmd:northBoundLatitude>
+						</gmd:EX_GeographicBoundingBox>
+					</gmd:geographicElement>
+					<gmd:geographicElement>
+						<gmd:EX_GeographicDescription>
+							<gmd:extentTypeCode>
+								<gco:Boolean>true</gco:Boolean>
+							</gmd:extentTypeCode>
+							<gmd:geographicIdentifier>
+								<gmd:MD_Identifier>
+									<gmd:authority>
+										<gmd:CI_Citation>
+											<gmd:title>
+												<gco:CharacterString>Resource &gt; Extents &gt; Extent &gt; Geographic Description &gt; Authority Citation &gt; Titles &gt; Title</gco:CharacterString>
+											</gmd:title>
+											<gmd:date>
+												<gmd:CI_Date>
+													<gmd:date>
+														<gco:Date>2011-01-01</gco:Date>
+													</gmd:date>
+													<gmd:dateType>
+														<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+													</gmd:dateType>
+												</gmd:CI_Date>
+											</gmd:date>
+											<gmd:citedResponsibleParty>
+												<gmd:CI_ResponsibleParty>
+													<gmd:organisationName>
+														<gco:CharacterString>Resource &gt; Extents &gt; Extent &gt; Geographic Description &gt; Authority Citation &gt; Contact &gt; Organization</gco:CharacterString>
+													</gmd:organisationName>
+													<gmd:contactInfo>
+														<gmd:CI_Contact>
+															<gmd:address>
+																<gmd:CI_Address>
+																	<gmd:electronicMailAddress>
+																		<gco:CharacterString>Resource &gt; Extents &gt; Extent &gt; Geographic Description &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+																	</gmd:electronicMailAddress>
+																</gmd:CI_Address>
+															</gmd:address>
+														</gmd:CI_Contact>
+													</gmd:contactInfo>
+													<gmd:role>
+														<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+													</gmd:role>
+												</gmd:CI_ResponsibleParty>
+											</gmd:citedResponsibleParty>
+											<gmd:onlineResource>
+												<gmd:CI_OnlineResource>
+													<gmd:linkage>
+														<gmd:URL>http://Resource_Extents_Extent_Geographic_Description_Authority_Citation_Online_Resource_Linkage</gmd:URL>
+													</gmd:linkage>
+													<gmd:protocol>
+														<gco:CharacterString>Resource &gt; Extents &gt; Extent &gt; Geographic Description &gt; Authority Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+													</gmd:protocol>
+												</gmd:CI_OnlineResource>
+											</gmd:onlineResource>
+										</gmd:CI_Citation>
+									</gmd:authority>
+									<gmd:code>
+										<gco:CharacterString>Resource &gt; Extents &gt; Extent &gt; Geographic Description &gt; Code</gco:CharacterString>
+									</gmd:code>
+								</gmd:MD_Identifier>
+							</gmd:geographicIdentifier>
+						</gmd:EX_GeographicDescription>
+					</gmd:geographicElement>
+					<gmd:temporalElement>
+						<gmd:EX_TemporalExtent>
+							<gmd:extent>
+								<gml:TimePeriod gml:id="idTM_Periodx2x685">
+									<gml:beginPosition>2011-01-01T00:00:01</gml:beginPosition>
+									<gml:endPosition>2011-12-31T23:59:59</gml:endPosition>
+								</gml:TimePeriod>
+							</gmd:extent>
+						</gmd:EX_TemporalExtent>
+					</gmd:temporalElement>
+					<gmd:verticalElement>
+						<gmd:EX_VerticalExtent>
+							<gmd:minimumValue>
+								<gco:Real>0.01</gco:Real>
+							</gmd:minimumValue>
+							<gmd:maximumValue>
+								<gco:Real>599.99</gco:Real>
+							</gmd:maximumValue>
+							<gmd:verticalCRS gco:nilReason="other:see_referenceSystemInfo"/>
+						</gmd:EX_VerticalExtent>
+					</gmd:verticalElement>
+				</gmd:EX_Extent>
+			</gmd:extent>
+			<gmd:extent>
+				<gmd:EX_Extent>
+					<gmd:description>
+						<gco:CharacterString>A bounding box created on the Item Description page has the esriExtentType attribute set with the value "search". The Item Description page only supports editing a bounding box with that attribute. The bounding box added by the synchronization process has the esriExtentType attribute set with the value "search". This bounding box is preferred when exporting to a standard that only allows one bounding box, such as the FGDC CSDGM.</gco:CharacterString>
+					</gmd:description>
+					<gmd:geographicElement>
+						<gmd:EX_GeographicBoundingBox>
+							<gmd:extentTypeCode>
+								<gco:Boolean>true</gco:Boolean>
+							</gmd:extentTypeCode>
+							<gmd:westBoundLongitude>
+								<gco:Decimal>-180</gco:Decimal>
+							</gmd:westBoundLongitude>
+							<gmd:eastBoundLongitude>
+								<gco:Decimal>180</gco:Decimal>
+							</gmd:eastBoundLongitude>
+							<gmd:southBoundLatitude>
+								<gco:Decimal>-90</gco:Decimal>
+							</gmd:southBoundLatitude>
+							<gmd:northBoundLatitude>
+								<gco:Decimal>90</gco:Decimal>
+							</gmd:northBoundLatitude>
+						</gmd:EX_GeographicBoundingBox>
+					</gmd:geographicElement>
+				</gmd:EX_Extent>
+			</gmd:extent>
+			<gmd:supplementalInformation>
+				<gco:CharacterString>Resource &gt; Details &gt; Supplemental Information</gco:CharacterString>
+			</gmd:supplementalInformation>
+		</gmd:MD_DataIdentification>
+	</gmd:identificationInfo>
+	<gmd:contentInfo>
+		<sdsfie:MD_FeatureCatalogueDescription>
+			<gmd:includedWithDataset>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:includedWithDataset>
+			<gmd:featureCatalogueCitation>
+				<gmd:CI_Citation>
+					<gmd:title>
+						<gco:CharacterString>Resource &gt; Content &gt; Feature Catalogue &gt; Feature Catalogue Citation &gt; Titles &gt; Title</gco:CharacterString>
+					</gmd:title>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-03-15</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:citedResponsibleParty>
+						<gmd:CI_ResponsibleParty>
+							<gmd:organisationName>
+								<gco:CharacterString>Resource &gt; Content &gt; Feature Catalogue &gt; Feature Catalogue Citation &gt; Contact &gt; Organization</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Resource &gt; Content &gt; Feature Catalogue &gt; Feature Catalogue Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:citedResponsibleParty>
+					<gmd:onlineResource>
+						<gmd:CI_OnlineResource>
+							<gmd:linkage>
+								<gmd:URL>http://Resource_Content_Feature_Catalogue_Feature_Catalogue_Citation_Online_Resource_Linkage</gmd:URL>
+							</gmd:linkage>
+							<gmd:protocol>
+								<gco:CharacterString>Resource &gt; Content &gt; Feature Catalogue &gt; Feature Catalogue Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+							</gmd:protocol>
+						</gmd:CI_OnlineResource>
+					</gmd:onlineResource>
+				</gmd:CI_Citation>
+			</gmd:featureCatalogueCitation>
+			<sdsfie:featureTypes>
+				<sdsfie:FeatureTypes>
+					<sdsfie:featureType>
+						<gco:LocalName codeSpace="Resource &gt; Content &gt; Feature Catalogue &gt; Feature Type &gt; Codespace">Resource &gt; Content &gt; Feature Catalogue &gt; Feature Type &gt; Name</gco:LocalName>
+					</sdsfie:featureType>
+				</sdsfie:FeatureTypes>
+			</sdsfie:featureTypes>
+		</sdsfie:MD_FeatureCatalogueDescription>
+	</gmd:contentInfo>
+	<gmd:contentInfo>
+		<gmd:MD_CoverageDescription>
+			<gmd:attributeDescription>
+				<gco:RecordType>Resource &gt; Content &gt; Coverage Description &gt; Attribute Description</gco:RecordType>
+			</gmd:attributeDescription>
+			<gmd:contentType>
+				<gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode" codeListValue="physicalMeasurement" codeSpace="ISOTC211/19115">physicalMeasurement</gmd:MD_CoverageContentTypeCode>
+			</gmd:contentType>
+			<gmd:dimension>
+				<gmd:MD_RangeDimension>
+					<gmd:sequenceIdentifier>
+						<gco:MemberName>
+							<gco:aName>
+								<gco:CharacterString>Resource &gt; Content &gt; Coverage Description &gt; Range Dimension &gt; Sequence Identifier</gco:CharacterString>
+							</gco:aName>
+							<gco:attributeType>
+								<gco:TypeName>
+									<gco:aName>
+										<gco:CharacterString>Resource &gt; Content &gt; Coverage Description &gt; Range Dimension &gt; Sequence Identifier &gt; Type</gco:CharacterString>
+									</gco:aName>
+								</gco:TypeName>
+							</gco:attributeType>
+						</gco:MemberName>
+					</gmd:sequenceIdentifier>
+					<gmd:descriptor>
+						<gco:CharacterString>Resource &gt; Content &gt; Coverage Description &gt; Range Dimension &gt; Descriptor</gco:CharacterString>
+					</gmd:descriptor>
+				</gmd:MD_RangeDimension>
+			</gmd:dimension>
+		</gmd:MD_CoverageDescription>
+	</gmd:contentInfo>
+	<gmd:contentInfo>
+		<gmd:MD_ImageDescription>
+			<gmd:attributeDescription>
+				<gco:RecordType>Resource &gt; Content &gt; Image Description &gt; Attribute Description</gco:RecordType>
+			</gmd:attributeDescription>
+			<gmd:contentType>
+				<gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode" codeListValue="image" codeSpace="ISOTC211/19115">image</gmd:MD_CoverageContentTypeCode>
+			</gmd:contentType>
+			<gmd:dimension>
+				<gmd:MD_Band>
+					<gmd:sequenceIdentifier>
+						<gco:MemberName>
+							<gco:aName>
+								<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Band &gt; Sequence Identifier</gco:CharacterString>
+							</gco:aName>
+							<gco:attributeType>
+								<gco:TypeName>
+									<gco:aName>
+										<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Band &gt; Sequence Identifier &gt; Type</gco:CharacterString>
+									</gco:aName>
+								</gco:TypeName>
+							</gco:attributeType>
+						</gco:MemberName>
+					</gmd:sequenceIdentifier>
+					<gmd:descriptor>
+						<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Band &gt; Descriptor</gco:CharacterString>
+					</gmd:descriptor>
+					<gmd:maxValue>
+						<gco:Real>255.99</gco:Real>
+					</gmd:maxValue>
+					<gmd:minValue>
+						<gco:Real>0.01</gco:Real>
+					</gmd:minValue>
+					<gmd:units>
+						<gml:UnitDefinition gml:id="idUOMx2x2011">
+							<gml:identifier codeSpace="GML_UomSymbol">Unified Code of Units of Measure</gml:identifier>
+							<gml:catalogSymbol codeSpace="http://aurora.regenstrief.org/UCUM">m</gml:catalogSymbol>
+						</gml:UnitDefinition>
+					</gmd:units>
+					<gmd:peakResponse>
+						<gco:Real>225.4</gco:Real>
+					</gmd:peakResponse>
+					<gmd:bitsPerValue>
+						<gco:Integer>8</gco:Integer>
+					</gmd:bitsPerValue>
+					<gmd:toneGradation>
+						<gco:Integer>4</gco:Integer>
+					</gmd:toneGradation>
+					<gmd:scaleFactor>
+						<gco:Real>0.98</gco:Real>
+					</gmd:scaleFactor>
+					<gmd:offset>
+						<gco:Real>19.3</gco:Real>
+					</gmd:offset>
+				</gmd:MD_Band>
+			</gmd:dimension>
+			<gmd:illuminationElevationAngle>
+				<gco:Real>78.5</gco:Real>
+			</gmd:illuminationElevationAngle>
+			<gmd:illuminationAzimuthAngle>
+				<gco:Real>135.5</gco:Real>
+			</gmd:illuminationAzimuthAngle>
+			<gmd:imagingCondition>
+				<gmd:MD_ImagingConditionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ImagingConditionCode" codeListValue="shadow" codeSpace="ISOTC211/19115">shadow</gmd:MD_ImagingConditionCode>
+			</gmd:imagingCondition>
+			<gmd:imageQualityCode>
+				<gmd:MD_Identifier>
+					<gmd:authority>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Quality Code &gt; Authority Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2008-09-18</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Quality Code &gt; Authority Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Quality Code &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://Resource_Content_Image_Description_Quality_Code_Authority_Citation_Online_Resource_Linkage</gmd:URL>
+									</gmd:linkage>
+									<gmd:protocol>
+										<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Quality Code &gt; Authority Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+									</gmd:protocol>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Citation>
+					</gmd:authority>
+					<gmd:code>
+						<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Quality Code &gt; Code</gco:CharacterString>
+					</gmd:code>
+				</gmd:MD_Identifier>
+			</gmd:imageQualityCode>
+			<gmd:cloudCoverPercentage>
+				<gco:Real>6.5</gco:Real>
+			</gmd:cloudCoverPercentage>
+			<gmd:processingLevelCode>
+				<MD_Identifier>
+					<gmd:authority>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Processing Level Code &gt; Authority Citation &gt; Titles &gt; Title</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2008-09-18</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Processing Level Code &gt; Authority Citation &gt; Contact &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Processing Level Code &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+						</gmd:CI_Citation>
+					</gmd:authority>
+					<gmd:code>
+						<gco:CharacterString>Resource &gt; Content &gt; Image Description &gt; Processing Level Code &gt; Code</gco:CharacterString>
+					</gmd:code>
+				</MD_Identifier>
+			</gmd:processingLevelCode>
+			<gmd:compressionGenerationQuantity>
+				<gco:Integer>2</gco:Integer>
+			</gmd:compressionGenerationQuantity>
+			<gmd:triangulationIndicator>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:triangulationIndicator>
+			<gmd:radiometricCalibrationDataAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:radiometricCalibrationDataAvailability>
+			<gmd:cameraCalibrationInformationAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:cameraCalibrationInformationAvailability>
+			<gmd:filmDistortionInformationAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:filmDistortionInformationAvailability>
+			<gmd:lensDistortionInformationAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</gmd:lensDistortionInformationAvailability>
+		</gmd:MD_ImageDescription>
+	</gmd:contentInfo>
+	<gmd:dataQualityInfo>
+		<gmd:DQ_DataQuality>
+			<gmd:scope>
+				<gmd:DQ_Scope>
+					<gmd:level>
+						<gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
+					</gmd:level>
+					<gmd:extent>
+						<gmd:EX_Extent>
+							<gmd:description>
+								<gco:CharacterString>Resource &gt; Data Quality &gt; Extent &gt; Description</gco:CharacterString>
+							</gmd:description>
+							<gmd:temporalElement>
+								<gmd:EX_TemporalExtent>
+									<gmd:extent>
+										<gml:TimeInstant gml:id="idTM_Instantx2x1080">
+											<gml:timePosition>2011-10-12T00:00:00</gml:timePosition>
+										</gml:TimeInstant>
+									</gmd:extent>
+								</gmd:EX_TemporalExtent>
+							</gmd:temporalElement>
+						</gmd:EX_Extent>
+					</gmd:extent>
+					<gmd:levelDescription gco:nilReason="missing"/>
+				</gmd:DQ_Scope>
+			</gmd:scope>
+			<gmd:report>
+				<gmd:DQ_AbsoluteExternalPositionalAccuracy>
+					<gmd:nameOfMeasure>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Name (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+					</gmd:nameOfMeasure>
+					<gmd:measureIdentification>
+						<gmd:MD_Identifier>
+							<gmd:authority>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Identifier &gt; Authority Citation &gt; Titles &gt; Title (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+									</gmd:title>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2011-08-31</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+									<gmd:citedResponsibleParty>
+										<gmd:CI_ResponsibleParty>
+											<gmd:organisationName>
+												<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Identifier &gt; Authority Citation &gt; Contact &gt; Organization (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+											</gmd:organisationName>
+											<gmd:contactInfo>
+												<gmd:CI_Contact>
+													<gmd:address>
+														<gmd:CI_Address>
+															<gmd:electronicMailAddress>
+																<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Identifier &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+															</gmd:electronicMailAddress>
+														</gmd:CI_Address>
+													</gmd:address>
+												</gmd:CI_Contact>
+											</gmd:contactInfo>
+											<gmd:role>
+												<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+											</gmd:role>
+										</gmd:CI_ResponsibleParty>
+									</gmd:citedResponsibleParty>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>http://Resource_Data_Quality_Report_Measure_Identifier_Authority_Citation_Online_Resource_Linkage_Type=Absolute_External_Positional_Accuracy_Dimension=Horizontal</gmd:URL>
+											</gmd:linkage>
+											<gmd:protocol>
+												<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Identifier &gt; Authority Citation &gt; Online Resource &gt; Protocol (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+											</gmd:protocol>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Citation>
+							</gmd:authority>
+							<gmd:code>
+								<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Identifier &gt; Code (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+							</gmd:code>
+						</gmd:MD_Identifier>
+					</gmd:measureIdentification>
+					<gmd:measureDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Description (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+					</gmd:measureDescription>
+					<gmd:evaluationMethodType>
+						<gmd:DQ_EvaluationMethodTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DQ_EvaluationMethodTypeCode" codeListValue="indirect" codeSpace="ISOTC211/19115">indirect</gmd:DQ_EvaluationMethodTypeCode>
+					</gmd:evaluationMethodType>
+					<gmd:evaluationMethodDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Evaluation Method &gt; Description (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+					</gmd:evaluationMethodDescription>
+					<gmd:evaluationProcedure>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Evaluation Method &gt; Procedure Citation &gt; Titles &gt; Title (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>2011-08-01</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<gmd:citedResponsibleParty>
+								<gmd:CI_ResponsibleParty>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Evaluation Method &gt; Procedure Citation &gt; Contact &gt; Organization (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Evaluation Method &gt; Procedure Citation &gt; Contact &gt; Contact Information &gt; Email (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:citedResponsibleParty>
+						</gmd:CI_Citation>
+					</gmd:evaluationProcedure>
+					<dateTime>
+						<gco:DateTime>2011-10-12T00:00:00</gco:DateTime>
+					</dateTime>
+					<gmd:result>
+						<gmd:DQ_ConformanceResult>
+							<gmd:specification>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Titles &gt; Title (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+									</gmd:title>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2009-06-20</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+									<gmd:citedResponsibleParty>
+										<gmd:CI_ResponsibleParty>
+											<gmd:organisationName>
+												<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Contact &gt; Organization (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+											</gmd:organisationName>
+											<gmd:contactInfo>
+												<gmd:CI_Contact>
+													<gmd:address>
+														<gmd:CI_Address>
+															<gmd:electronicMailAddress>
+																<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Contact &gt; Contact Information &gt; Email (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+															</gmd:electronicMailAddress>
+														</gmd:CI_Address>
+													</gmd:address>
+												</gmd:CI_Contact>
+											</gmd:contactInfo>
+											<gmd:role>
+												<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+											</gmd:role>
+										</gmd:CI_ResponsibleParty>
+									</gmd:citedResponsibleParty>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>http://Resource_Data_Quality_Report_Conformance_Result_Specification_Online_Resource_Linkage_Type=Absolute_External_Positional_Accuracy_Dimension=Horizontal</gmd:URL>
+											</gmd:linkage>
+											<gmd:protocol>
+												<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Online Resource &gt; Protocol (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+											</gmd:protocol>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Citation>
+							</gmd:specification>
+							<gmd:explanation>
+								<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Explanation (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+							</gmd:explanation>
+							<gmd:pass>
+								<gco:Boolean>true</gco:Boolean>
+							</gmd:pass>
+						</gmd:DQ_ConformanceResult>
+					</gmd:result>
+					<gmd:result>
+						<gmd:DQ_QuantitativeResult>
+							<gmd:valueType>
+								<gco:RecordType>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Value Type (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:RecordType>
+							</gmd:valueType>
+							<gmd:valueUnit>
+								<gml:UnitDefinition gml:id="idUOMx2x1398">
+									<gml:identifier codeSpace="GML_UomSymbol">Unified Code of Units of Measure</gml:identifier>
+									<gml:catalogSymbol codeSpace="http://aurora.regenstrief.org/UCUM">m</gml:catalogSymbol>
+								</gml:UnitDefinition>
+							</gmd:valueUnit>
+							<gmd:errorStatistic>
+								<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Error Statistic (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:CharacterString>
+							</gmd:errorStatistic>
+							<gmd:value>
+								<gco:Record>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Value (Type=Absolute External Positional Accuracy + Dimension=Horizontal)</gco:Record>
+							</gmd:value>
+						</gmd:DQ_QuantitativeResult>
+					</gmd:result>
+				</gmd:DQ_AbsoluteExternalPositionalAccuracy>
+			</gmd:report>
+			<gmd:report>
+				<gmd:DQ_AbsoluteExternalPositionalAccuracy>
+					<gmd:measureDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Description (Type=Absolute External Positional Accuracy + Dimension=Vertical)</gco:CharacterString>
+					</gmd:measureDescription>
+					<gmd:evaluationMethodDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Evaluation Method &gt; Description (Type=Absolute External Positional Accuracy + Dimension=Vertical)</gco:CharacterString>
+					</gmd:evaluationMethodDescription>
+					<gmd:result>
+						<gmd:DQ_QuantitativeResult>
+							<gmd:valueUnit>
+								<gml:UnitDefinition gml:id="idUOMx2x1421">
+									<gml:identifier codeSpace="GML_UomSymbol">Unified Code of Units of Measure</gml:identifier>
+									<gml:catalogSymbol codeSpace="http://aurora.regenstrief.org/UCUM">m</gml:catalogSymbol>
+								</gml:UnitDefinition>
+							</gmd:valueUnit>
+							<gmd:value>
+								<gco:Record>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Value (Type=Absolute External Positional Accuracy + Dimension=Vertical)</gco:Record>
+							</gmd:value>
+						</gmd:DQ_QuantitativeResult>
+					</gmd:result>
+				</gmd:DQ_AbsoluteExternalPositionalAccuracy>
+			</gmd:report>
+			<gmd:report>
+				<gmd:DQ_CompletenessOmission>
+					<gmd:measureDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Description (Type=Completeness Omission)</gco:CharacterString>
+					</gmd:measureDescription>
+					<gmd:result>
+						<gmd:DQ_QuantitativeResult>
+							<gmd:valueUnit>
+								<gml:UnitDefinition gml:id="idUOMx2x1438">
+									<gml:identifier codeSpace="GML_UomSymbol">Unified Code of Units of Measure</gml:identifier>
+									<gml:catalogSymbol codeSpace="http://aurora.regenstrief.org/UCUM">m</gml:catalogSymbol>
+								</gml:UnitDefinition>
+							</gmd:valueUnit>
+							<gmd:value>
+								<gco:Record>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Value (Type=Completeness Omission)</gco:Record>
+							</gmd:value>
+						</gmd:DQ_QuantitativeResult>
+					</gmd:result>
+				</gmd:DQ_CompletenessOmission>
+			</gmd:report>
+			<gmd:report>
+				<gmd:DQ_ConceptualConsistency>
+					<gmd:measureDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Description (Type=Conceptual Consistency)</gco:CharacterString>
+					</gmd:measureDescription>
+					<gmd:result>
+						<gmd:DQ_QuantitativeResult>
+							<gmd:valueUnit>
+								<gml:UnitDefinition gml:id="idUOMx2x1453">
+									<gml:identifier codeSpace="GML_UomSymbol">Unified Code of Units of Measure</gml:identifier>
+									<gml:catalogSymbol codeSpace="http://aurora.regenstrief.org/UCUM">m</gml:catalogSymbol>
+								</gml:UnitDefinition>
+							</gmd:valueUnit>
+							<gmd:value>
+								<gco:Record>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Value (Type=Conceptual Consistency)</gco:Record>
+							</gmd:value>
+						</gmd:DQ_QuantitativeResult>
+					</gmd:result>
+				</gmd:DQ_ConceptualConsistency>
+			</gmd:report>
+			<gmd:report>
+				<gmd:DQ_QuantitativeAttributeAccuracy>
+					<gmd:measureDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Measure &gt; Description (Type=Quantitative Attribute Accuracy)</gco:CharacterString>
+					</gmd:measureDescription>
+					<gmd:evaluationMethodDescription>
+						<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Evaluation Method &gt; Description (Type=Quantitative Attribute Accuracy)</gco:CharacterString>
+					</gmd:evaluationMethodDescription>
+					<gmd:result>
+						<gmd:DQ_QuantitativeResult>
+							<gmd:valueUnit>
+								<gml:UnitDefinition gml:id="idUOMx2x1470">
+									<gml:identifier codeSpace="GML_UomSymbol">Unified Code of Units of Measure</gml:identifier>
+									<gml:catalogSymbol codeSpace="http://aurora.regenstrief.org/UCUM">Cel</gml:catalogSymbol>
+								</gml:UnitDefinition>
+							</gmd:valueUnit>
+							<gmd:value>
+								<gco:Record>Resource &gt; Data Quality &gt; Report &gt; Quantitative Result &gt; Value (Type=Quantitative Attribute Accuracy)</gco:Record>
+							</gmd:value>
+						</gmd:DQ_QuantitativeResult>
+					</gmd:result>
+				</gmd:DQ_QuantitativeAttributeAccuracy>
+			</gmd:report>
+			<gmd:report>
+				<gmd:DQ_DomainConsistency>
+					<gmd:result>
+						<gmd:DQ_ConformanceResult>
+							<gmd:specification>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Titles &gt; Title (Type=Domain Consistency)</gco:CharacterString>
+									</gmd:title>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2010-07-01</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+									<gmd:citedResponsibleParty>
+										<gmd:CI_ResponsibleParty>
+											<gmd:organisationName>
+												<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Contact &gt; Organization (Type=Domain Consistency)</gco:CharacterString>
+											</gmd:organisationName>
+											<gmd:contactInfo>
+												<gmd:CI_Contact>
+													<gmd:address>
+														<gmd:CI_Address>
+															<gmd:electronicMailAddress>
+																<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Contact &gt; Contact Information &gt; Email (Type=Domain Consistency)</gco:CharacterString>
+															</gmd:electronicMailAddress>
+														</gmd:CI_Address>
+													</gmd:address>
+												</gmd:CI_Contact>
+											</gmd:contactInfo>
+											<gmd:role>
+												<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+											</gmd:role>
+										</gmd:CI_ResponsibleParty>
+									</gmd:citedResponsibleParty>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>http://Resource_Data_Quality_Report_Conformance_Result_Specification_Online_Resource_Linkage_Type=Domain_Consistency</gmd:URL>
+											</gmd:linkage>
+											<gmd:protocol>
+												<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Specification &gt; Online Resource &gt; Protocol (Type=Domain Consistency)</gco:CharacterString>
+											</gmd:protocol>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Citation>
+							</gmd:specification>
+							<gmd:explanation>
+								<gco:CharacterString>Resource &gt; Data Quality &gt; Report &gt; Conformance Result &gt; Explanation (Type=Domain Consistency)</gco:CharacterString>
+							</gmd:explanation>
+							<gmd:pass>
+								<gco:Boolean>true</gco:Boolean>
+							</gmd:pass>
+						</gmd:DQ_ConformanceResult>
+					</gmd:result>
+				</gmd:DQ_DomainConsistency>
+			</gmd:report>
+			<gmd:lineage>
+				<gmd:LI_Lineage>
+					<gmd:statement>
+						<gco:CharacterString>Resource &gt; Lineage &gt; Statement</gco:CharacterString>
+					</gmd:statement>
+					<gmd:processStep>
+						<gmd:LI_ProcessStep>
+							<gmd:description>
+								<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Process Description</gco:CharacterString>
+							</gmd:description>
+							<gmd:rationale>
+								<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Rationale</gco:CharacterString>
+							</gmd:rationale>
+							<gmd:dateTime>
+								<gco:DateTime>2011-10-01T16:10:32</gco:DateTime>
+							</gmd:dateTime>
+							<gmd:processor>
+								<gmd:CI_ResponsibleParty>
+									<gmd:individualName>
+										<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Name</gco:CharacterString>
+									</gmd:individualName>
+									<gmd:organisationName>
+										<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Organization</gco:CharacterString>
+									</gmd:organisationName>
+									<gmd:contactInfo>
+										<gmd:CI_Contact>
+											<gmd:phone>
+												<gmd:CI_Telephone>
+													<gmd:voice>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Contact Information &gt; Phone</gco:CharacterString>
+													</gmd:voice>
+												</gmd:CI_Telephone>
+											</gmd:phone>
+											<gmd:address>
+												<gmd:CI_Address>
+													<gmd:deliveryPoint>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Contact Information &gt; Address</gco:CharacterString>
+													</gmd:deliveryPoint>
+													<gmd:city>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Contact Information &gt; City</gco:CharacterString>
+													</gmd:city>
+													<gmd:administrativeArea>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Contact Information &gt; State</gco:CharacterString>
+													</gmd:administrativeArea>
+													<gmd:postalCode>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Contact Information &gt; Postal Code</gco:CharacterString>
+													</gmd:postalCode>
+													<gmd:country>
+														<gco:CharacterString>US</gco:CharacterString>
+													</gmd:country>
+													<gmd:electronicMailAddress>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Process Step &gt; Processor &gt; Contact Information &gt; Email</gco:CharacterString>
+													</gmd:electronicMailAddress>
+												</gmd:CI_Address>
+											</gmd:address>
+										</gmd:CI_Contact>
+									</gmd:contactInfo>
+									<gmd:role>
+										<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="processor">processor</gmd:CI_RoleCode>
+									</gmd:role>
+								</gmd:CI_ResponsibleParty>
+							</gmd:processor>
+						</gmd:LI_ProcessStep>
+					</gmd:processStep>
+					<gmd:source>
+						<gmd:LI_Source>
+							<gmd:description>
+								<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Description</gco:CharacterString>
+							</gmd:description>
+							<gmd:scaleDenominator>
+								<gmd:MD_RepresentativeFraction>
+									<gmd:denominator>
+										<gco:Integer>250000</gco:Integer>
+									</gmd:denominator>
+								</gmd:MD_RepresentativeFraction>
+							</gmd:scaleDenominator>
+							<gmd:sourceReferenceSystem>
+								<gmd:MD_ReferenceSystem>
+									<gmd:referenceSystemIdentifier>
+										<gmd:RS_Identifier>
+											<gmd:authority>
+												<gmd:CI_Citation>
+													<gmd:title>
+														<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Authority Citation &gt; Titles &gt; Title</gco:CharacterString>
+													</gmd:title>
+													<gmd:date>
+														<gmd:CI_Date>
+															<gmd:date>
+																<gco:Date>2011-06-15</gco:Date>
+															</gmd:date>
+															<gmd:dateType>
+																<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+															</gmd:dateType>
+														</gmd:CI_Date>
+													</gmd:date>
+													<gmd:citedResponsibleParty>
+														<gmd:CI_ResponsibleParty>
+															<gmd:organisationName>
+																<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Authority Citation &gt; Contact &gt; Organization</gco:CharacterString>
+															</gmd:organisationName>
+															<gmd:contactInfo>
+																<gmd:CI_Contact>
+																	<gmd:address>
+																		<gmd:CI_Address>
+																			<gmd:electronicMailAddress>
+																				<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Authority Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+																			</gmd:electronicMailAddress>
+																		</gmd:CI_Address>
+																	</gmd:address>
+																</gmd:CI_Contact>
+															</gmd:contactInfo>
+															<gmd:role>
+																<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+															</gmd:role>
+														</gmd:CI_ResponsibleParty>
+													</gmd:citedResponsibleParty>
+													<gmd:onlineResource>
+														<gmd:CI_OnlineResource>
+															<gmd:linkage>
+																<gmd:URL>http://Resource_Lineage_Data_Source_Reference_System_Authority_Citation_Online_Resource_Linkage</gmd:URL>
+															</gmd:linkage>
+															<gmd:protocol>
+																<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Authority Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+															</gmd:protocol>
+														</gmd:CI_OnlineResource>
+													</gmd:onlineResource>
+												</gmd:CI_Citation>
+											</gmd:authority>
+											<gmd:code>
+												<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Code</gco:CharacterString>
+											</gmd:code>
+											<gmd:codeSpace>
+												<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Code Space</gco:CharacterString>
+											</gmd:codeSpace>
+											<gmd:version>
+												<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Reference System &gt; Version</gco:CharacterString>
+											</gmd:version>
+										</gmd:RS_Identifier>
+									</gmd:referenceSystemIdentifier>
+								</gmd:MD_ReferenceSystem>
+							</gmd:sourceReferenceSystem>
+							<gmd:sourceCitation>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Citation &gt; Titles &gt; Title</gco:CharacterString>
+									</gmd:title>
+									<gmd:alternateTitle>
+										<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Citation &gt; Titles &gt; Alternate Title</gco:CharacterString>
+									</gmd:alternateTitle>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2011-07-15</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+									<gmd:citedResponsibleParty>
+										<gmd:CI_ResponsibleParty>
+											<gmd:organisationName>
+												<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Citation &gt; Contact &gt; Organization</gco:CharacterString>
+											</gmd:organisationName>
+											<gmd:contactInfo>
+												<gmd:CI_Contact>
+													<gmd:address>
+														<gmd:CI_Address>
+															<gmd:electronicMailAddress>
+																<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+															</gmd:electronicMailAddress>
+														</gmd:CI_Address>
+													</gmd:address>
+												</gmd:CI_Contact>
+											</gmd:contactInfo>
+											<gmd:role>
+												<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+											</gmd:role>
+										</gmd:CI_ResponsibleParty>
+									</gmd:citedResponsibleParty>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>http://Resource_Lineage_Data_Source_Source_Citation_Online_Resource_Linkage</gmd:URL>
+											</gmd:linkage>
+											<gmd:protocol>
+												<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+											</gmd:protocol>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Citation>
+							</gmd:sourceCitation>
+							<gmd:sourceExtent>
+								<gmd:EX_Extent>
+									<gmd:description>
+										<gco:CharacterString>Resource &gt; Lineage &gt; Data Source &gt; Source Extent &gt; Description</gco:CharacterString>
+									</gmd:description>
+									<gmd:temporalElement>
+										<gmd:EX_TemporalExtent>
+											<gmd:extent>
+												<gml:TimeInstant gml:id="idTM_Instantx2x1124">
+													<gml:timePosition>2011-06-06T00:00:00</gml:timePosition>
+												</gml:TimeInstant>
+											</gmd:extent>
+										</gmd:EX_TemporalExtent>
+									</gmd:temporalElement>
+									<gmd:temporalElement>
+										<gmd:EX_TemporalExtent>
+											<gmd:extent>
+												<gml:TimeInstant gml:id="idTM_Instantx2x1130">
+													<gml:timePosition>2011-07-14T14:20:00</gml:timePosition>
+												</gml:TimeInstant>
+											</gmd:extent>
+										</gmd:EX_TemporalExtent>
+									</gmd:temporalElement>
+									<gmd:temporalElement>
+										<gmd:EX_TemporalExtent>
+											<gmd:extent>
+												<gml:TimeInstant gml:id="idTM_Instantx2x1136">
+													<gml:timePosition>2011-08-05T06:05:00</gml:timePosition>
+												</gml:TimeInstant>
+											</gmd:extent>
+										</gmd:EX_TemporalExtent>
+									</gmd:temporalElement>
+								</gmd:EX_Extent>
+							</gmd:sourceExtent>
+						</gmd:LI_Source>
+					</gmd:source>
+				</gmd:LI_Lineage>
+			</gmd:lineage>
+		</gmd:DQ_DataQuality>
+	</gmd:dataQualityInfo>
+	<gmd:metadataConstraints>
+		<gmd:MD_Constraints>
+			<gmd:useLimitation>
+				<gco:CharacterString>Metadata &gt; Constraints &gt; General Constraints &gt; Use Limitation</gco:CharacterString>
+			</gmd:useLimitation>
+		</gmd:MD_Constraints>
+	</gmd:metadataConstraints>
+	<gmd:metadataConstraints>
+		<sdsfie:MD_LegalConstraints>
+			<gmd:useLimitation>
+				<gco:CharacterString>Metadata &gt; Constraints &gt; Legal Constraints &gt; Use Limitation</gco:CharacterString>
+			</gmd:useLimitation>
+			<gmd:accessConstraints>
+				<gmd:MD_RestrictionCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RestrictionCode" codeListValue="008">008</gmd:MD_RestrictionCode>
+			</gmd:accessConstraints>
+			<gmd:useConstraints>
+				<gmd:MD_RestrictionCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RestrictionCode" codeListValue="007">007</gmd:MD_RestrictionCode>
+			</gmd:useConstraints>
+			<sdsfie:furtherExplanation>
+				<gco:CharacterString>Metadata &gt; Constraints &gt; Legal Constraints &gt; Other Constraints</gco:CharacterString>
+			</sdsfie:furtherExplanation>
+		</sdsfie:MD_LegalConstraints>
+	</gmd:metadataConstraints>
+	<gmd:metadataConstraints>
+		<sdsfie:MD_SecurityConstraints>
+			<gmd:useLimitation>
+				<gco:CharacterString>Metadata &gt; Constraints &gt; Security Constraints &gt; Use Limitation</gco:CharacterString>
+			</gmd:useLimitation>
+			<classification xmlns="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml" xmlns:srv="http://www.isotc211.org/2005/srv">
+				<MD_ClassificationCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/ClassificationCode" codeListValue="U" codeSpace="DISDI">U</MD_ClassificationCode>
+			</classification>
+			<gmd:userNotes>
+				<gco:CharacterString>Metadata &gt; Constraints &gt; Security Constraints &gt; User Note</gco:CharacterString>
+			</gmd:userNotes>
+			<gmd:classificationSystem>
+				<gco:CharacterString>US CAPCO</gco:CharacterString>
+			</gmd:classificationSystem>
+			<gmd:handlingDescription>
+				<gco:CharacterString>Metadata &gt; Constraints &gt; Security Constraints &gt; Handling Description</gco:CharacterString>
+			</gmd:handlingDescription>
+			<sdsfie:capcoMarking ism:classification="U" ism:ownerProducer=""/>
+		</sdsfie:MD_SecurityConstraints>
+	</gmd:metadataConstraints>
+	<gmd:applicationSchemaInfo>
+		<gmd:MD_ApplicationSchemaInformation>
+			<gmd:name>
+				<gmd:CI_Citation>
+					<gmd:title>
+						<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Citation &gt; Titles &gt; Title</gco:CharacterString>
+					</gmd:title>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>2011-04-08</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:citedResponsibleParty>
+						<gmd:CI_ResponsibleParty>
+							<gmd:organisationName>
+								<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Citation &gt; Contact &gt; Organization</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Citation &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:citedResponsibleParty>
+					<gmd:onlineResource>
+						<gmd:CI_OnlineResource>
+							<gmd:linkage>
+								<gmd:URL>http://Resource_References_Application_Schema_Information_Citation_Online_Resource_Linkage</gmd:URL>
+							</gmd:linkage>
+							<gmd:protocol>
+								<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Citation &gt; Online Resource &gt; Protocol</gco:CharacterString>
+							</gmd:protocol>
+						</gmd:CI_OnlineResource>
+					</gmd:onlineResource>
+				</gmd:CI_Citation>
+			</gmd:name>
+			<gmd:schemaLanguage>
+				<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Schema Language</gco:CharacterString>
+			</gmd:schemaLanguage>
+			<gmd:constraintLanguage>
+				<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Constraint Language</gco:CharacterString>
+			</gmd:constraintLanguage>
+			<gmd:schemaAscii>
+				<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; ASCII</gco:CharacterString>
+			</gmd:schemaAscii>
+			<gmd:graphicsFile>
+				<gco:Binary src="Resource &gt; References &gt; Application Schema Information &gt; Graphics File Source">Resource &gt; References &gt; Application Schema Information &gt; Graphics File</gco:Binary>
+			</gmd:graphicsFile>
+			<gmd:softwareDevelopmentFile>
+				<gco:Binary src="Resource &gt; References &gt; Application Schema Information &gt; Software Development File Source">Resource &gt; References &gt; Application Schema Information &gt; Software Development File</gco:Binary>
+			</gmd:softwareDevelopmentFile>
+			<gmd:softwareDevelopmentFileFormat>
+				<gco:CharacterString>Resource &gt; References &gt; Application Schema Information &gt; Software Development File Format</gco:CharacterString>
+			</gmd:softwareDevelopmentFileFormat>
+		</gmd:MD_ApplicationSchemaInformation>
+	</gmd:applicationSchemaInfo>
+	<gmd:metadataMaintenance>
+		<gmd:MD_MaintenanceInformation>
+			<gmd:maintenanceAndUpdateFrequency>
+				<gmd:MD_MaintenanceFrequencyCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</gmd:MD_MaintenanceFrequencyCode>
+			</gmd:maintenanceAndUpdateFrequency>
+			<gmd:dateOfNextUpdate>
+				<gco:DateTime>2012-11-01T12:00:00</gco:DateTime>
+			</gmd:dateOfNextUpdate>
+			<gmd:userDefinedMaintenanceFrequency>
+				<gts:TM_PeriodDuration>P1Y2M3DT4H5M6S</gts:TM_PeriodDuration>
+			</gmd:userDefinedMaintenanceFrequency>
+			<gmd:updateScope>
+				<gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
+			</gmd:updateScope>
+			<gmd:updateScopeDescription>
+				<gmd:MD_ScopeDescription>
+					<gmd:attributes uuidref="Metadata &gt; Maintenance &gt; Scope Description &gt; Attributes"/>
+				</gmd:MD_ScopeDescription>
+			</gmd:updateScopeDescription>
+			<gmd:updateScopeDescription>
+				<gmd:MD_ScopeDescription>
+					<gmd:features uuidref="Metadata &gt; Maintenance &gt; Scope Description &gt; Features"/>
+				</gmd:MD_ScopeDescription>
+			</gmd:updateScopeDescription>
+			<gmd:updateScopeDescription>
+				<gmd:MD_ScopeDescription>
+					<gmd:featureInstances uuidref="Metadata &gt; Maintenance &gt; Scope Description &gt; Feature Instances"/>
+				</gmd:MD_ScopeDescription>
+			</gmd:updateScopeDescription>
+			<gmd:updateScopeDescription>
+				<gmd:MD_ScopeDescription>
+					<gmd:attributeInstances uuidref="Metadata &gt; Maintenance &gt; Scope Description &gt; Attribute Instances"/>
+				</gmd:MD_ScopeDescription>
+			</gmd:updateScopeDescription>
+			<gmd:updateScopeDescription>
+				<gmd:MD_ScopeDescription>
+					<gmd:dataset>
+						<gco:CharacterString>Metadata &gt; Maintenance &gt; Scope Description &gt; Dataset</gco:CharacterString>
+					</gmd:dataset>
+				</gmd:MD_ScopeDescription>
+			</gmd:updateScopeDescription>
+			<gmd:updateScopeDescription>
+				<gmd:MD_ScopeDescription>
+					<gmd:other>
+						<gco:CharacterString>Metadata &gt; Maintenance &gt; Scope Description &gt; Other Instances</gco:CharacterString>
+					</gmd:other>
+				</gmd:MD_ScopeDescription>
+			</gmd:updateScopeDescription>
+			<gmd:maintenanceNote>
+				<gco:CharacterString>Last metadata review date: 20111014</gco:CharacterString>
+			</gmd:maintenanceNote>
+			<gmd:maintenanceNote>
+				<gco:CharacterString>Metadata &gt; Maintenance &gt; Maintenance Note</gco:CharacterString>
+			</gmd:maintenanceNote>
+			<gmd:contact>
+				<gmd:CI_ResponsibleParty>
+					<gmd:organisationName>
+						<gco:CharacterString>Metadata &gt; Maintenance &gt; Contact &gt; Organization</gco:CharacterString>
+					</gmd:organisationName>
+					<gmd:contactInfo>
+						<gmd:CI_Contact>
+							<gmd:address>
+								<gmd:CI_Address>
+									<gmd:electronicMailAddress>
+										<gco:CharacterString>Metadata &gt; Maintenance &gt; Contact &gt; Contact Information &gt; Email</gco:CharacterString>
+									</gmd:electronicMailAddress>
+								</gmd:CI_Address>
+							</gmd:address>
+						</gmd:CI_Contact>
+					</gmd:contactInfo>
+					<gmd:role>
+						<gmd:CI_RoleCode codeList="http://metadata.ces.mil/dse/ns/DISDI/codelist/RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+					</gmd:role>
+				</gmd:CI_ResponsibleParty>
+			</gmd:contact>
+		</gmd:MD_MaintenanceInformation>
+	</gmd:metadataMaintenance>
+</sdsfie:MD_Metadata>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--...................................................................
+    Bestand:        Detailering XSD voor SMP profiel
+    Omschrijving:   Detailstukken van het Metadataprofiel NLMODSMP is 
+                    verwerkt in deze sub XSD
+    Versie:         1.0
+    Auteur:         D. Stoepker | IVENT/A&A/DM3/UNIT2
+    ................................................................-->
+<xs:schema xmlns:nmp="http://geoportaal.mindef.nl/nmp"
+           xmlns:gmd="http://www.isotc211.org/2005/gmd"
+           xmlns:gco="http://www.isotc211.org/2005/gco"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:gss="http://www.isotc211.org/2005/gss"
+           xmlns:gts="http://www.isotc211.org/2005/gts"
+           targetNamespace="http://geoportaal.mindef.nl/nmp"
+           elementFormDefault="qualified" version="0.1">
+  <!--...................................................................
+    Imports van de ISO XSD's
+    ................................................................-->
+  <xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd" />
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/spatialRepresentation.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/metadataExtension.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/content.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/citation.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/portrayalCatalogue.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/dataQuality.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gss" schemaLocation="../gss/gss.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/gts" schemaLocation="../gts/gts.xsd"/>
+
+  <!--...................................................................
+    1. Uitwerking van MD_Identification
+    ................................................................-->
+  <xs:complexType name="MD_Identification_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <!-- Zie 1.1 voor CI_Citation_PropertyType -->
+          <xs:element name="citation" type="nmp:CI_Citation_PropertyType" />
+          <xs:element name="abstract" type="gco:CharacterString_PropertyType" />
+          <!-- Zie 1.2 voor CI_ResponsibleParty_PropertyType -->
+          <xs:element name="pointOfContact" type="nmp:CI_ResponsibleParty_PropertyType" maxOccurs="unbounded" />
+          <!-- Zie 1.3 voor MD_Keywords_PropertyType -->
+          <xs:element name="descriptiveKeywords" type="nmp:MD_Keywords_PropertyType" maxOccurs="unbounded"  />
+          <!-- Zie 1.4 voor MD_Constraints_PropertyType -->
+          <xs:element name="resourceConstraints" type="nmp:MD_Constraints_PropertyType" maxOccurs="unbounded" />
+          <!-- Zie 1.5 voor SV_ServiceIdentification_PropertyType -->
+          <xs:element name="serviceIdentification" type="nmp:SV_ServiceIdentification_PropertyType" />
+          <xs:element name="dataIdentification">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MD_DataIdentification">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <!-- Zie 1.6 voor EX_Extent_PropertyType -->
+                      <xs:element name="extent" type="nmp:EX_Extent_PropertyType" minOccurs="0" maxOccurs="unbounded" />                      
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_Identification" type="nmp:MD_Identification_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_Identification_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_Identification"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.1. Uitwerking van CI_Citation
+    ................................................................-->
+  <xs:complexType name="CI_Citation_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="title" type="gco:CharacterString_PropertyType"/>
+          <xs:element name="temporalReference" type="gmd:CI_Date_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="CI_Citation" type="nmp:CI_Citation_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="CI_Citation_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:CI_Citation"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.2. Uitwerking van CI_ResponsibleParty
+    ................................................................-->
+  <xs:complexType name="CI_ResponsibleParty_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="organisationName" type="gco:CharacterString_PropertyType" />
+          <!-- Zie 1.2.1 voor CI_Contact_PropertyType -->
+          <xs:element name="contactInfo" type="nmp:CI_Contact_PropertyType" minOccurs="0" />
+          <xs:element name="role" type="gmd:CI_RoleCode_PropertyType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="CI_ResponsibleParty" type="nmp:CI_ResponsibleParty_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="CI_ResponsibleParty_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:CI_ResponsibleParty"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.2.1. Uitwerking van CI_Contact
+    ................................................................-->
+  <xs:complexType name="CI_Contact_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <!-- Zie 1.2.1.1 voor CI_Address_PropertyType -->
+          <xs:element name="address" type="nmp:CI_Address_PropertyType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="CI_Contact" type="nmp:CI_Contact_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="CI_Contact_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:CI_Contact"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.2.1.1. Uitwerking van CI_Address
+    ................................................................-->
+  <xs:complexType name="CI_Address_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="electronicMailAddress" type="gco:CharacterString_PropertyType" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="CI_Address" type="nmp:CI_Address_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="CI_Address_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:CI_Address"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.3. Uitwerking van MD_Keywords
+    ................................................................-->
+  <xs:complexType name="MD_Keywords_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="keyword" type="gco:CharacterString_PropertyType" maxOccurs="unbounded"/>
+          <xs:element name="thesaurusName" minOccurs="0">
+            <xs:complexType>
+              <xs:sequence>
+                <!-- Er wordt geen gebruik gemaakt van CI_Citation uit 1.1, vanwege andere velden -->
+                <xs:element name="CI_Citation">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="title" type="gco:CharacterString_PropertyType"/>
+                      <xs:element name="date" type="gmd:CI_Date_PropertyType" maxOccurs="3"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_Keywords" type="nmp:MD_Keywords_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_Keywords_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_Keywords"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.4. Uitwerking van MD_Constraints
+    ................................................................-->
+  <xs:complexType name="MD_Constraints_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <!-- Zie 1.4.1 voor MD_SecurityConstraints_PropertyType -->
+          <xs:element name="legalConstraints" type="nmp:MD_LegalConstraints_PropertyType" />
+          <!-- Zie 1.4.2 voor MD_SecurityConstraints_PropertyType -->
+          <xs:element name="securityConstraints" type="nmp:MD_SecurityConstraints_PropertyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_Constraints" type="nmp:MD_Constraints_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_Constraints_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_Constraints"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.4.1. Uitwerking van MD_LegalConstraints
+    ................................................................-->
+  <xs:complexType name="MD_LegalConstraints_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="useLimitation" type="gco:CharacterString_PropertyType" maxOccurs="unbounded"/>
+          <xs:element name="accessConstraints" type="gmd:MD_RestrictionCode_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="otherConstraints" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_LegalConstraints" type="nmp:MD_LegalConstraints_Type" />
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_LegalConstraints_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_LegalConstraints"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.4.2. Uitwerking van MD_SecurityConstraints
+    ................................................................-->
+  <xs:complexType name="MD_SecurityConstraints_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="useLimitation" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="classification" type="gmd:MD_ClassificationCode_PropertyType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_SecurityConstraints" type="nmp:MD_SecurityConstraints_Type" />
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_SecurityConstraints_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_SecurityConstraints"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.5. Uitwerking van SV_ServiceIdentification_Type
+    ................................................................-->
+  <xs:complexType name="SV_ServiceIdentification_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="serviceType" type="gco:GenericName_PropertyType"/>
+          <!-- Zie 1.5.1 voor SV_CouplingType_PropertyType -->
+          <xs:element name="couplingType" type="nmp:SV_CouplingType_PropertyType"/>
+          <!-- Zie 1.5.2 voor SV_OperationMetadata_PropertyType -->
+          <xs:element name="containsOperations" type="nmp:SV_OperationMetadata_PropertyType" maxOccurs="unbounded" />
+          <!-- Zie 1.5.3 voor MD_DataIdentification_PropertyType -->
+          <xs:element name="operatesOn" type="nmp:MD_DataIdentification_PropertyType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="SV_ServiceIdentification" type="nmp:SV_ServiceIdentification_Type" />
+  <!-- ........................................................................ -->
+  <xs:complexType name="SV_ServiceIdentification_PropertyType">
+    <xs:sequence>
+      <xs:element ref="nmp:SV_ServiceIdentification" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.5.1. Uitwerking van SV_ServiceIdentification_Type
+    ................................................................-->
+  <xs:element name="SV_CouplingType" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="SV_CouplingType_PropertyType">
+    <xs:sequence>
+      <xs:element ref="nmp:SV_CouplingType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.5.2. Uitwerking van SV_OperationMetadata_Type
+    ................................................................-->
+  <xs:complexType name="SV_OperationMetadata_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="operationName" type="gco:CharacterString_PropertyType"/>
+          <!-- Zie 1.5.2.1 voor DCPList_PropertyType -->
+          <xs:element name="DCP" type="nmp:DCPList_PropertyType" maxOccurs="unbounded"/>
+          <xs:element name="connectPoint" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CI_OnlineResource">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="linkage" type="gmd:URL_PropertyType" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="SV_OperationMetadata" type="nmp:SV_OperationMetadata_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="SV_OperationMetadata_PropertyType">
+    <xs:sequence>
+      <xs:element ref="nmp:SV_OperationMetadata"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.5.2.1. Uitwerking van DCPList_PropertyType
+    ................................................................-->
+
+  <!-- ........................................................................ -->
+  <xs:element name="DCPList" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="DCPList_PropertyType">
+    <xs:sequence>
+      <xs:element ref="nmp:DCPList" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.5.3. Uitwerking van MD_DataIdentification
+    ................................................................-->
+  <xs:complexType name="MD_DataIdentification_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="CoupledResource">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="identifier" type="gco:CharacterString_PropertyType"/>
+                <xs:element name="metadataFileIdentifier" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_DataIdentification" type="nmp:MD_DataIdentification_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_DataIdentification_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_DataIdentification"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+  
+  <!--...................................................................
+    1.6. Uitwerking van EX_Extent_PropertyType
+    ................................................................-->
+  <xs:complexType name="EX_Extent_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" />
+          <!-- Zie 1.6.1 voor EX_GeographicBoundingBox_Type -->
+          <xs:element name="geographicElement" type="nmp:EX_GeographicBoundingBox_PropertyType" />
+          <!-- Zie 1.6.2 voor EX_TemporalExtent_PropertyType -->
+          <xs:element name="temporalElement" type="nmp:EX_TemporalExtent_PropertyType" minOccurs="0" maxOccurs="2"/>
+          <xs:element name="positionalExtent" minOccurs="0">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EX_GeographicExtent">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <!-- Zie 1.6.3 voor EX_BoundingPolygon_PropertyType -->
+                      <xs:element name="polygon" type="nmp:EX_BoundingPolygon_PropertyType" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>    
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="EX_Extent" type="nmp:EX_Extent_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="EX_Extent_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:EX_Extent"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    1.6.1. Uitwerking van EX_GeographicBoundingBox
+    ................................................................-->
+  <xs:complexType name="EX_GeographicBoundingBox_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="westBoundLongitude" type="gco:Decimal_PropertyType"/>
+          <xs:element name="eastBoundLongitude" type="gco:Decimal_PropertyType"/>
+          <xs:element name="southBoundLatitude" type="gco:Decimal_PropertyType"/>
+          <xs:element name="northBoundLatitude" type="gco:Decimal_PropertyType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="EX_GeographicBoundingBox" type="nmp:EX_GeographicBoundingBox_Type" />
+  <!-- ........................................................................ -->
+  <xs:complexType name="EX_GeographicBoundingBox_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:EX_GeographicBoundingBox"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+  
+  <!--...................................................................
+    1.6.2. Uitwerking van EX_TemporalExtent
+    ................................................................-->
+  <xs:complexType name="EX_TemporalExtent_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="extent" type="gts:TM_Primitive_PropertyType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="EX_TemporalExtent" type="nmp:EX_TemporalExtent_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="EX_TemporalExtent_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:EX_TemporalExtent"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+  
+  <!--...................................................................
+    1.6.3. Uitwerking van EX_BoundingPolygon
+    ................................................................-->
+  <xs:complexType name="EX_BoundingPolygon_Type">
+    <xs:complexContent>
+      <xs:extension base="gmd:AbstractEX_GeographicExtent_Type">
+        <xs:sequence>
+          <xs:element name="polygon" type="gss:GM_Object_PropertyType" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="EX_BoundingPolygon" type="nmp:EX_BoundingPolygon_Type" />
+  <!-- ........................................................................ -->
+  <xs:complexType name="EX_BoundingPolygon_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:EX_BoundingPolygon"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>  
+
+  <!--...................................................................
+    2. Uitwerking van MD_Distribution
+    ................................................................-->
+  <xs:complexType name="MD_Distribution_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <!-- Zie 2.1 voor MD_DigitalTransferOptions_PropertyType -->
+          <xs:element name="transferOptions" type="nmp:MD_DigitalTransferOptions_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_Distribution" type="nmp:MD_Distribution_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_Distribution_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_Distribution"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    2.1. Uitwerking van MD_DigitalTransferOptions
+    ................................................................-->
+  <xs:complexType name="MD_DigitalTransferOptions_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <!-- Zie 2.1.1 voor CI_OnlineResource_PropertyType -->
+          <xs:element name="onLine" type="nmp:CI_OnlineResource_PropertyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="MD_DigitalTransferOptions" type="nmp:MD_DigitalTransferOptions_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="MD_DigitalTransferOptions_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:MD_DigitalTransferOptions"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    2.1.1. Uitwerking van CI_OnlineResource
+    ................................................................-->
+  <xs:complexType name="CI_OnlineResource_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="linkage" type="gmd:URL_PropertyType" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="protocol" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="CI_OnlineResource" type="nmp:CI_OnlineResource_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="CI_OnlineResource_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:CI_OnlineResource"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    3. Uitwerking van DQ_DataQuality
+    ................................................................-->
+  <xs:complexType name="DQ_DataQuality_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <!-- Zie 3.1 voor LI_Lineage_PropertyType -->
+          <xs:element name="scope" type="nmp:DQ_Scope_PropertyType" />
+          <xs:element name="report" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="DQ_Element">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <!-- Zie 3.2 voor DQ_Result_PropertyType -->
+                      <xs:element name="result" type="nmp:DQ_Result_PropertyType" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ........................................................................ -->
+  <xs:element name="DQ_DataQuality" type="nmp:DQ_DataQuality_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="DQ_DataQuality_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:DQ_DataQuality"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    3.1. Uitwerking van DQ_Scope
+    ................................................................-->
+  <xs:complexType name="DQ_Scope_Type">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence>
+          <xs:element name="level" type="gmd:MD_ScopeCode_PropertyType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="DQ_Scope" type="nmp:DQ_Scope_Type"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="DQ_Scope_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:DQ_Scope"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    3.3. Uitwerking van AbstractDQ_Result_Type
+    ................................................................-->
+  <xs:complexType name="AbstractDQ_Result_Type" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="gco:AbstractObject_Type">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="AbstractDQ_Result" type="nmp:AbstractDQ_Result_Type" abstract="true"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="DQ_Result_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:AbstractDQ_Result"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+  <!--...................................................................
+    3.3.1. Uitwerking van DQ_ConformanceResult
+    ................................................................-->
+  <xs:complexType name="DQ_ConformanceResult_Type">
+    <xs:complexContent>
+      <xs:extension base="nmp:AbstractDQ_Result_Type">
+        <xs:sequence>
+          <xs:element name="specification">
+            <xs:complexType>
+              <xs:sequence>
+                <!-- Er wordt geen gebruik gemaakt van CI_Citation uit 1.1, vanwege andere velden -->
+                <xs:element name="CI_Citation">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="title" type="gco:CharacterString_PropertyType"/>
+                      <xs:element name="date" type="gmd:CI_Date_PropertyType" maxOccurs="3"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="explanation" type="gco:CharacterString_PropertyType"/>
+          <xs:element name="pass" type="gco:Boolean_PropertyType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="DQ_ConformanceResult" type="nmp:DQ_ConformanceResult_Type" substitutionGroup="nmp:AbstractDQ_Result" />
+  <!-- ........................................................................ -->
+  <xs:complexType name="DQ_ConformanceResult_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="nmp:DQ_ConformanceResult"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gco:ObjectReference"/>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PerformancePlanOrReport xmlns="urn:ISO:std:iso:17469:tech:xsd:PerformancePlanOrReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ISO:std:iso:17469:tech:xsd:PerformancePlanOrReport http://xml.fido.gov/stratml/references/PerformancePlanOrReportISOVersion20150612.xsd" Type="Performance_Report">
+	<Name>Model Performance Report for Charitable Organizations</Name>
+	<Description>In support of Charity Navigator's 3.0 initiative, focusing on results, this is a template charities can use to render their missions, visions, values, goals, objectives, stakeholders, and performance indicators in open, standard, machine-readable Strategy Markup Language (StratML) format. 
+You can edit this template to replace its content with the text (and numbers) for your own report by opening this file from its URL -- http://xml.fido.gov/stratml/carmel/iso/part2/MPR4CO.xml -- in Joe Carmel's XForms form, which is available at http://xmldatasets.net/StratML/Part2Form.xml  Once you have done so, you should save it locally and then publish it on your website.  To save the file, click on the XML button at the bottom of the form and then save the file locally.
+
+In your report, a brief description of the report can be provided in this field.  </Description>
+	<OtherInformation>The URL where your report will be published on your website should be included in the Source of Plan field.  The start, end, and publication dates of your report should be designated in the date fields.
+
+If you'd like to provide additional general information about your report that is not accommodated in other, more explicit elements below, it can be provided here.</OtherInformation>
+	<StrategicPlanCore>
+		<Organization>
+			<Name>Insert Your Organization's Name Here</Name>
+			<Acronym>Insert Your Organization's Acronym Here</Acronym>
+			<Identifier>_6990800a-b683-11e5-adb1-b50f77810c4c</Identifier>
+			<Description>If you'd like, you may briefly describe your organization here.</Description>
+			<Stakeholder>
+				<Name>[To be named]</Name>
+				<Description>In addition to naming your stakeholders, you may also briefly describe them.  The Stakeholder Type element may be used to indicate whether each stakeholder is a person, an organization, or a group.</Description>
+				<Role>
+					<Name>[To be named]</Name>
+					<Description>The role(s) of each stakeholder may be named and described.  Each stakeholder may also be designated as a performer or beneficiary.  If a stakeholder is both, a second Role Type element may be inserted to provide for such designation.</Description>
+				</Role>
+			</Stakeholder>
+		</Organization>
+		<Vision>
+			<Description>The organization's vision statement may be included here.  Ideally, vision statements should be brief (e.g., a single sentence or phrase) and inspirational.  However, it is up to your stakeholders themselves to determine the quality and value of your vision.</Description>
+			<Identifier>_69908190-b683-11e5-adb1-b50f77810c4c</Identifier>
+		</Vision>
+		<Mission>
+			<Description>Your mission statement should briefly describe the basic, overall purpose of your organization.  Again, however, it is your own stakeholders who will decide the quality and value of your mission, in relation to their own values.</Description>
+			<Identifier>_69908258-b683-11e5-adb1-b50f77810c4c</Identifier>
+		</Mission>
+		<Value>
+			<Name>[To be named]</Name>
+			<Description>Values are basic principles that are important and define the character of the organization, against which its performance can be evaluated.  As many of them as appropriate may be named and described, but it may be appropriate to designate three to five of them that may distinguish the organization from others.</Description>
+		</Value>
+		<Goal>
+			<Name>[To be named]</Name>
+			<Description>Goals are results to be achieved over more than a single budgetary allocation and performance reporting period.  As many of them as appropriate may be named and described, and the Sequence Indicator element can be used to indicate their serial order.  The Identifier element will be automatically populated with a globally unique identifier (GUID) unless the organization has its own system of identifiers for its goals and objectives.</Description>
+			<Identifier>_699082f8-b683-11e5-adb1-b50f77810c4c</Identifier>
+			<SequenceIndicator>1</SequenceIndicator>
+			<Stakeholder>
+				<Name>[To be named]</Name>
+				<Description>To the degree that individual goals may have particular stakeholders, as many of them as appropriate may be named and described.</Description>
+				<Role>
+					<Name>[To be named]</Name>
+					<Description>The role(s) of each stakeholder may be named and described in terms of their relationships to each goal.</Description>
+				</Role>
+			</Stakeholder>
+			<OtherInformation>This element can be used to  provide addition information about the goal if desired.</OtherInformation>
+			<Objective>
+				<Name>[To be named]</Name>
+				<Description>Objectives are results to be achieved within a single budgetary allocation and performance reporting cycle.  As many of them as appropriate may be named and described under each Goal, and the Sequence Indicator element can be used to indicate their serial order.  The Identifier element will be automatically populated with a globally unique identifier (GUID) unless the organization has its own system of identifiers for its goals and objectives.</Description>
+				<Identifier>_699083fc-b683-11e5-adb1-b50f77810c4c</Identifier>
+				<SequenceIndicator>1.1</SequenceIndicator>
+				<Stakeholder>
+					<Name>[To be named]</Name>
+					<Description>To the degree that individual objectives may have particular stakeholders, as many of them as appropriate may be named and described.</Description>
+					<Role>
+						<Name>[To be named]</Name>
+						<Description>The role(s) of each stakeholder may be named and described in terms of their relationships to each goal.  In performance plans and reports, each objective should have at least one named stakeholder of the performer type, although an organizational position rather than a particular person may be designated.  To facilitate feedback from stakeholders, intended beneficiary groups should also be named.</Description>
+					</Role>
+				</Stakeholder>
+				<OtherInformation>This element can be used to  provide addition information about the objective if desired.</OtherInformation>
+				<PerformanceIndicator>
+					<SequenceIndicator/>
+					<MeasurementDimension/>
+					<UnitOfMeasurement/>
+					<Identifier>_699084a6-b683-11e5-adb1-b50f77810c4c</Identifier>
+					<Relationship>
+						<Identifier>PLACEHOLDER_1</Identifier>
+						<Name/>
+						<Description>If the performance indicator is related to other goals and/or objectives besides the one under which it is nested, these Relationship elements can be used to cite the Identifier of the other goal/objective.  (If the other goal/objective is included in this report, it will not have GUID until after the file is saved the first time.  After the file has been saved, the GUID can be copied and pasted into the Relationship/Identifier element.)  The relationship can also be named and described.</Description>
+					</Relationship>
+					<MeasurementInstance>
+						<TargetResult>
+							<Description>The target result can be described here.  If it is quantitative, the targeted number should be included in the Number of Units element immediately below.  The dates the measurement period are scheduled to begin and end should be indicated in the Start Date and End Date fields below.</Description>
+							<StartDate/>
+							<EndDate/>
+						</TargetResult>
+						<ActualResult>
+							<Description>The actual result can be described here.  If it is quantitative, the number should be included in the Number of Units element immediately below.  The dates the measurement period actually began and ended should be indicated in the Start Date and End Date fields below.</Description>
+							<StartDate/>
+							<EndDate/>
+						</ActualResult>
+					</MeasurementInstance>
+					<OtherInformation>This element can be used to provide additional information about the performance indicator, as appropriate.  Each indicator may be designated as being of either the Quantitative or Qualitative type, but Quantitative performance indicators are preferred.  Each indicator can also be classified according to its place in the value chain, from inputs to outcomes.  The Measurement Dimension is what is being measured and the Unit of Measurement is the scale on which the metrics are based.</OtherInformation>
+				</PerformanceIndicator>
+			</Objective>
+		</Goal>
+	</StrategicPlanCore>
+	<AdministrativeInformation>
+		<Identifier>_6990855a-b683-11e5-adb1-b50f77810c4c</Identifier>
+		<StartDate/>
+		<EndDate/>
+		<PublicationDate/>
+		<Source>http://xml.fido.gov/stratml/carmel/iso/part2/MPR4CO.xml</Source>
+	</AdministrativeInformation>
+	<Submitter>
+		<Identifier>_69908640-b683-11e5-adb1-b50f77810c4c</Identifier>
+		<GivenName>First Name of the Submitter of the Report</GivenName>
+		<Surname>Last Name of the Submitter</Surname>
+		<PhoneNumber>Optional</PhoneNumber>
+		<EmailAddress>Optional</EmailAddress>
+	</Submitter>
+</PerformancePlanOrReport>

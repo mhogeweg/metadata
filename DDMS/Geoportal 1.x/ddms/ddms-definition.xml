@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema key="ddms" 
+        templateFile="gpt/metadata/ddms/ddms-template.xml"
+        toEsriIsoXslt="gpt/metadata/ddms/ddms-toEsriIso.xslt">
+        
+  <!-- schema label -->
+  <label resourceKey="catalog.mdParam.schema.ddms"/>
+ 
+  <!-- schema namespaces -->
+  <namespace prefix="ddms" uri="http://metadata.dod.mil/mdr/ns/DDMS/1.4/" />
+  <namespace prefix="ICISM" uri="urn:us:gov:ic:ism:v2"/>
+  <namespace prefix="ec08" uri="http://www.opengis.net/ec08"/>
+  <namespace prefix="gml" uri="http://www.opengis.net/gml"/>
+ 
+  <!-- schema interrogation -->
+  <interrogation count="count(/ddms:Resource)"/>
+  
+  <!-- identification section -->
+  <section key="Resource">
+    <label resourceKey="catalog.mdParam.ddms.resource"/>
+
+	<!-- identifier -->    
+  	<parameter key="ddms_identifier" meaning="esriDocID">
+  		<label resourceKey="catalog.mdParam.ddms.identifier"/>
+  		<input type="text" size="50" maxlength="50" editable="false" 
+             defaultValue="#{EditMetadataController.newUuid}"/>
+  		<validation required="true"/>
+  		<content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:identifier"/> 
+  	</parameter>
+
+	<!-- title -->
+    <parameter key="ddms_title" meaning="title"> 
+      <label resourceKey="catalog.mdParam.ddms.title"/>
+      <input type="text" maxlength="255" defaultValue="Untitled"/>
+      <validation required="true"/>
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:title"/>
+    </parameter>
+  
+	<!-- description -->  
+    <parameter key="ddms_description" meaning="abstract">
+      <label resourceKey="catalog.mdParam.ddms.description"/>
+      <input type="textArea"/>
+      <validation required="true"/>
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:description"/>
+    </parameter>
+  
+	<!-- language -->
+	<parameter key="ddms_language">
+		<label resourceKey="catalog.mdParam.ddms.language"/>
+		<input type="selectOneMenu" defaultValue="en" />
+		<validation required="true"/>
+		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:language/@ddms:value">
+			<codes>
+				<code key="DE" resourceKey="catalog.mdCode.language.iso639_2.ger"/>
+				<code key="NL" resourceKey="catalog.mdCode.language.iso639_2.dut"/>
+				<code key="EN" resourceKey="catalog.mdCode.language.iso639_2.eng"/>
+				<code key="FR" resourceKey="catalog.mdCode.language.iso639_2.fre"/>
+				<code key="IT" resourceKey="catalog.mdCode.language.iso639_2.ita"/>
+				<code key="KO" resourceKey="catalog.mdCode.language.iso639_2.kor"/>
+				<code key="LT" resourceKey="catalog.mdCode.language.iso639_2.lit"/>
+				<code key="NO" resourceKey="catalog.mdCode.language.iso639_2.nor"/>
+				<code key="PL" resourceKey="catalog.mdCode.language.iso639_2.pol"/>
+				<code key="PT" resourceKey="catalog.mdCode.language.iso639_2.por"/>
+				<code key="RU" resourceKey="catalog.mdCode.language.iso639_2.rus"/>
+				<code key="ES" resourceKey="catalog.mdCode.language.iso639_2.spa"/>
+				<code key="SV" resourceKey="catalog.mdCode.language.iso639_2.swe"/>
+				<code key="TK" resourceKey="catalog.mdCode.language.iso639_2.tur"/>
+				<code key="ZH" resourceKey="catalog.mdCode.language.iso639_2.chi"/>
+			</codes>
+		</content>
+	</parameter>
+    
+    <!-- date posted -->
+    <parameter key="ddms_dates_posted"> 
+      <label resourceKey="catalog.mdParam.ddms.dates.posted"/>
+      <input type="text" size="20" maxlength="10" 
+             hintResourceKey="catalog.general.inputDateFormat"
+             defaultValue="#{EditMetadataController.now}"/>
+      <validation required="true" valueType="date"/>
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:dates/@ddms:posted"/>
+    </parameter> 
+
+    <!-- rights -->
+    <!-- copyright -->
+    <parameter key="ddms_rights_copyright"> 
+      <label resourceKey="catalog.mdParam.ddms.rights.copyright"/>
+	<input type="selectOneMenu"/>
+	<validation required="true" valueType="string" />
+	<content nodeType="single" useSelectForUpdate="true" select="/ddms:Resource/ddms:rights/@ddms:copyright">
+		<codes>
+			<code key="false" resourceKey="catalog.mdCode.boolean.false"/>
+			<code key="true" resourceKey="catalog.mdCode.boolean.true"/>
+		</codes>
+	</content>
+    </parameter> 
+    <!-- privacy Act-->
+    <parameter key="ddms_rights_privacyAct"> 
+      <label resourceKey="catalog.mdParam.ddms.rights.privacyAct"/>
+	<input type="selectOneMenu"/>
+      <validation required="true" valueType="string"/>
+	<content nodeType="single" useSelectForUpdate="true" select="/ddms:Resource/ddms:rights/@ddms:privacyAct">
+		<codes>
+			<code key="false" resourceKey="catalog.mdCode.boolean.false"/>
+			<code key="true" resourceKey="catalog.mdCode.boolean.true"/>
+		</codes>
+	</content>
+    </parameter>     
+    <!-- privacy Act-->
+    <parameter key="ddms_rights_intellectualProperty"> 
+      <label resourceKey="catalog.mdParam.ddms.rights.intellectualProperty"/>
+	<input type="selectOneMenu"/>
+      <validation required="true" valueType="string"/>
+	<content nodeType="single" useSelectForUpdate="true" select="/ddms:Resource/ddms:rights/@ddms:intellectualProperty">
+		<codes>
+			<code key="false" resourceKey="catalog.mdCode.boolean.false"/>
+			<code key="true" resourceKey="catalog.mdCode.boolean.true"/>
+		</codes>
+	</content>
+    </parameter> 
+  </section>
+
+  <section key="ddms_creator">
+    <label resourceKey="catalog.mdParam.ddms.section.creator"/>
+
+
+      <!-- ICISM Classification -->    
+      <parameter key="ddms_creator_icism_classification">
+  		<label resourceKey="catalog.mdParam.ddms.icism.classification"/>
+  		<input type="text" size="5" maxlength="5" editable="true" defaultValue="U"/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/@ICISM:classification"/> 
+      </parameter>
+
+      <!-- ICISM Owner Producer -->    
+      <parameter key="ddms_creator_person_name">
+  		<label resourceKey="catalog.mdParam.ddms.icism.ownerProducer"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue="USA"/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/@ICISM:ownerProducer"/> 
+      </parameter>
+
+      <!-- ICISM Dissemination Controls -->    
+      <parameter key="ddms_creator_person_surname">
+  		<label resourceKey="catalog.mdParam.ddms.icism.disseminationControls"/>
+  		<input type="text" size="10" maxlength="10" editable="true" defaultValue="NONE"/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/@ICISM:disseminationControls"/> 
+      </parameter>
+
+    <section key="ddms_section_creator_person" open="false" obligation="exclusive">
+      <label resourceKey="catalog.mdParam.ddms.section.person"/>
+
+      <!-- Affiliation -->    
+      <parameter key="ddms_creator_person_affiliation">
+  		<label resourceKey="catalog.mdParam.ddms.affiliation"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/ddms:Person/ddms:affiliation"/> 
+      </parameter>
+
+      <!-- Phone -->    
+      <parameter key="ddms_creator_person_phone">
+  		<label resourceKey="catalog.mdParam.ddms.phone"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/ddms:Person/ddms:phone"/> 
+      </parameter>
+
+      <!-- E-mail -->    
+      <parameter key="ddms_creator_person_email">
+  		<label resourceKey="catalog.mdParam.ddms.email"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/ddms:Person/ddms:email"/> 
+      </parameter>
+    </section>
+
+    <section key="ddms_section_creator_organization" open="false" obligation="exclusive">
+      <label resourceKey="catalog.mdParam.ddms.section.organization"/>
+
+      <!-- Name -->    
+      <parameter key="ddms_creator_organization_name">
+  		<label resourceKey="catalog.mdParam.ddms.name"/>
+  		<input type="text" size="50" maxlength="50" editable="false" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/ddms:Organization/ddms:name"/> 
+      </parameter>
+
+      <!-- Phone -->    
+      <parameter key="ddms_creator_organization_phone">
+  		<label resourceKey="catalog.mdParam.ddms.phone"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/ddms:Organization/ddms:phone"/> 
+      </parameter>
+
+      <!-- E-mail -->    
+      <parameter key="ddms_creator_organization_email">
+  		<label resourceKey="catalog.mdParam.ddms.email"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:creator/ddms:Organization/ddms:email"/> 
+      </parameter>
+    </section>
+
+  </section>
+
+
+  <!-- Publisher -->
+  <section key="ddms_publisher">
+    <label resourceKey="catalog.mdParam.ddms.section.publisher"/>
+
+
+      <!-- ICISM Classification -->    
+      <parameter key="ddms_publisher_icism_classification">
+  		<label resourceKey="catalog.mdParam.ddms.icism.classification"/>
+  		<input type="text" size="5" maxlength="5" editable="true" defaultValue="U"/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/@ICISM:classification"/> 
+      </parameter>
+
+      <!-- ICISM Owner Producer -->    
+      <parameter key="ddms_publisher_person_name">
+  		<label resourceKey="catalog.mdParam.ddms.icism.ownerProducer"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue="USA"/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/@ICISM:ownerProducer"/> 
+      </parameter>
+
+      <!-- ICISM Dissemination Controls -->    
+      <parameter key="ddms_publisher_person_surname">
+  		<label resourceKey="catalog.mdParam.ddms.icism.disseminationControls"/>
+  		<input type="text" size="10" maxlength="10" editable="true" defaultValue="NONE"/>
+  		<validation required="false"/>
+  		<content required="false"/>select="/ddms:Resource/ddms:publisher/@ICISM:disseminationControls"/> 
+      </parameter>
+
+    <section key="ddms_section_publisher_person" open="false" obligation="exclusive">
+      <label resourceKey="catalog.mdParam.ddms.section.person"/>
+
+      <!-- Affiliation -->    
+      <parameter key="ddms_publisher_person_affiliation">
+  		<label resourceKey="catalog.mdParam.ddms.affiliation"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/ddms:Person/ddms:affiliation"/> 
+      </parameter>
+
+      <!-- Phone -->    
+      <parameter key="ddms_publisher_person_phone">
+  		<label resourceKey="catalog.mdParam.ddms.phone"/>
+  		<input type="text" size="50" maxlength="50" editable="false" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/ddms:Person/ddms:phone"/> 
+      </parameter>
+
+      <!-- E-mail -->    
+      <parameter key="ddms_publisher_person_email">
+  		<label resourceKey="catalog.mdParam.ddms.email"/>
+  		<input type="text" size="50" maxlength="50" editable="false" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/ddms:Person/ddms:email"/> 
+      </parameter>
+    </section>
+
+    <section key="ddms_section_publisher_organization" open="false" obligation="exclusive">
+      <label resourceKey="catalog.mdParam.ddms.section.organization"/>
+
+      <!-- Name -->    
+      <parameter key="ddms_publisher_organization_name">
+  		<label resourceKey="catalog.mdParam.ddms.name"/>
+  		<input type="text" size="50" maxlength="50" editable="false" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/ddms:Organization/ddms:name"/> 
+      </parameter>
+
+      <!-- Phone -->    
+      <parameter key="ddms_publisher_organization_phone">
+  		<label resourceKey="catalog.mdParam.ddms.phone"/>
+  		<input type="text" size="50" maxlength="50" editable="false" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/ddms:Organization/ddms:phone"/> 
+      </parameter>
+
+      <!-- E-mail -->    
+      <parameter key="ddms_publisher_organization_email">
+  		<label resourceKey="catalog.mdParam.ddms.email"/>
+  		<input type="text" size="50" maxlength="50" editable="false" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:publisher/ddms:Organization/ddms:email"/> 
+      </parameter>
+    </section>
+
+  </section>
+
+  <!-- Format  -->
+  <section key="ddms_section_format">
+    <label resourceKey="catalog.mdParam.ddms.section.format"/>
+
+      <!-- Mime type -->    
+      <parameter key="ddms_format_media_mimeType">
+  		<label resourceKey="catalog.mdParam.ddms.mimeType"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:format/ddms:Media/ddms:mimeType"/> 
+      </parameter>
+
+      <!-- extent -->    
+      <parameter key="ddms_format_media_extent">
+  		<label resourceKey="catalog.mdParam.ddms.extent"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:format/ddms:Media/ddms:extent"/> 
+      </parameter>
+
+      <!-- medium -->    
+      <parameter key="ddms_format_media_medium">
+  		<label resourceKey="catalog.mdParam.ddms.medium"/>
+  		<input type="text" size="50" maxlength="50" editable="true" defaultValue=""/>
+  		<validation required="false"/>
+  		<content useSelectForUpdate="true" select="/ddms:Resource/ddms:format/ddms:Media/ddms:medium"/> 
+      </parameter>
+  </section>
+
+  <!-- envelope section -->
+	<section key="envelope">
+    <label resourceKey="catalog.mdParam.envelope.caption"/> 
+    
+    <parameter key="envelope.west" meaning="envelope.west"> 
+      <label resourceKey="catalog.mdParam.envelope.west"/>
+      <input type="text" size="24" maxlength="24" defaultValue="-180"
+             hintResourceKey="catalog.general.inputLongitudeFormat"/>
+      <validation required="false" valueType="double"/>
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:geospatialCoverage/ddms:GeospatialExtent/ddms:boundingGeometry/gml:Polygon/gml:Exterior/gml:LinearRing/gml:pos"/> 
+    </parameter>
+    
+    <parameter key="envelope.east" meaning="envelope.east"> 
+      <label resourceKey="catalog.mdParam.envelope.east"/>
+      <input type="text" size="24" maxlength="24" defaultValue="180"
+             hintResourceKey="catalog.general.inputLongitudeFormat"/>
+      <validation required="false" valueType="double"/>
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:geospatialCoverage/ddms:GeospatialExtent/ddms:boundingGeometry/gml:Polygon/gml:Exterior/gml:LinearRing/gml:pos"/> 
+    </parameter>
+    
+    <parameter key="envelope.north" meaning="envelope.north"> 
+      <label resourceKey="catalog.mdParam.envelope.north"/>
+      <input type="text" size="24" maxlength="24" defaultValue="90"
+             hintResourceKey="catalog.general.inputLatitudeFormat"/>
+      <validation required="false" valueType="double"/>
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:geospatialCoverage/ddms:GeospatialExtent/ddms:boundingGeometry/gml:Polygon/gml:Exterior/gml:LinearRing/gml:pos"/> 
+    </parameter>
+
+    <parameter key="envelope.south" meaning="envelope.south"> 
+      <label resourceKey="catalog.mdParam.envelope.south"/>
+      <input type="text" size="24" maxlength="24" defaultValue="-90"
+             hintResourceKey="catalog.general.inputLatitudeFormat"/>
+      <validation required="false" valueType="double" />
+      <content useSelectForUpdate="true"
+               select="/ddms:Resource/ddms:geospatialCoverage/ddms:GeospatialExtent/ddms:boundingGeometry/gml:Polygon/gml:Exterior/gml:LinearRing/gml:pos"/> 
+    </parameter>
+    
+    <!--  interactive map -->
+    <section key="envelope.map.container">
+      <parameter key="envelope.map"> 
+        <input type="map"/>
+      </parameter>
+    </section>
+
+  </section>
+  
+</schema>
